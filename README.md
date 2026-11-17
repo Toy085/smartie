@@ -1,0 +1,3 @@
+# smartie
+
+A Godot project
