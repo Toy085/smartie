@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://blxofw1bi3bvl"]
+
+[ext_resource type="Texture2D" uid="uid://i42g6gmju8gr" path="res://assets/kenney/kenney_tiny-city/Tiles/tile_0120.png" id="1_g708d"]
+[ext_resource type="Script" uid="uid://ksk8yevyx4s8" path="res://scripts/player/movement.gd" id="1_tklbj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_doqwu"]
+size = Vector2(16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_doqwu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_g708d")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="CharacterBody2D" unique_id=1534527947]
+script = ExtResource("1_tklbj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=814268004]
+shape = SubResource("RectangleShape2D_doqwu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=187927847]
+sprite_frames = SubResource("SpriteFrames_doqwu")
