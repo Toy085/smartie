@@ -1,8 +1,13 @@
-[gd_scene format=3 uid="uid://dha5r8kj8uetd"]
+[gd_scene format=4 uid="uid://dha5r8kj8uetd"]
 
+[ext_resource type="TileSet" uid="uid://cv42l741hr14b" path="res://tilesets/interior.tres" id="1_ka884"]
 [ext_resource type="PackedScene" uid="uid://blxofw1bi3bvl" path="res://char/player/player.tscn" id="1_ta4h7"]
 
 [node name="Node2D" type="Node2D" unique_id=294637574]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=888790186]
+tile_map_data = PackedByteArray("AAD//wEAAAACAAYAAAAAAAEAAAACAAYAAAAAAAAAAAACAAYAAAAAAP//AAACAAYAAAD///7/AAACAAYAAAD+////AAACAAYAAAD+/wAAAAACAAYAAAD//wAAAAACAAYAAAD/////AAACAAYAAAACAP//AAAMAAQAAAACAAAAAAAMAAUAAAACAAEAAAAMAAYAAAADAP//AAANAAQAAAADAAAAAAANAAUAAAADAAEAAAANAAYAAAAEAP//AAAOAAQAAAAEAAAAAAAOAAUAAAAEAAEAAAAOAAYAAAA=")
+tile_set = ExtResource("1_ka884")
 
 [node name="Node2D" parent="." unique_id=1534527947 instance=ExtResource("1_ta4h7")]
 
