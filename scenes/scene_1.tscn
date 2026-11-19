@@ -2,6 +2,11 @@
 
 [ext_resource type="TileSet" uid="uid://cv42l741hr14b" path="res://tilesets/interior.tres" id="1_ka884"]
 [ext_resource type="PackedScene" uid="uid://blxofw1bi3bvl" path="res://char/player/player.tscn" id="1_ta4h7"]
+[ext_resource type="PackedScene" uid="uid://d2y4l136tjpqw" path="res://char/npc/wife.tscn" id="3_cn2eb"]
+[ext_resource type="Script" uid="uid://cqcur1rm7433g" path="res://addons/dialogue_manager/nodes/actionable/dialogue_actionable_2d.gd" id="4_lki8s"]
+[ext_resource type="Resource" uid="uid://dd8kfpeae7yxg" path="res://Dialogues/scene_1/Greeting.dialogue" id="5_t6bmd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_doqwu"]
 
 [node name="Node2D" type="Node2D" unique_id=294637574]
 
@@ -28,3 +33,15 @@ position = Vector2(32, 22)
 zoom = Vector2(5, 5)
 limit_enabled = false
 position_smoothing_enabled = true
+
+[node name="Node2D2" parent="." unique_id=1863178936 instance=ExtResource("3_cn2eb")]
+position = Vector2(-16, -8)
+
+[node name="DialogueActionable2D" type="Area2D" parent="." unique_id=1260385867]
+script = ExtResource("4_lki8s")
+dialogue_resource = ExtResource("5_t6bmd")
+dialogue_cue = "start"
+metadata/_custom_type_script = "uid://cqcur1rm7433g"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueActionable2D" unique_id=129924209]
+shape = SubResource("RectangleShape2D_doqwu")
