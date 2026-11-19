@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://c0pohitm2uui3"]
 
+[ext_resource type="AudioStream" uid="uid://7m1u6bw73xx2" path="res://Intro/sfx/1-01. Intro.wav" id="1_vrsr8"]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_doqwu"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_doqwu"]
@@ -13,3 +15,14 @@ shape = SubResource("BoxShape3D_doqwu")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="cube" unique_id=1513588932]
 mesh = SubResource("BoxMesh_doqwu")
+
+[node name="101_Intro" type="AudioStreamPlayer3D" parent="." unique_id=494027626]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12529945, 1.14, 0.11359048)
+stream = ExtResource("1_vrsr8")
+autoplay = true
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1648498710]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7477323, 1.6789889)
+
+[node name="AudioListener3D" type="AudioListener3D" parent="Camera3D" unique_id=1978565604]
+current = true
