@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c0pohitm2uui3"]
 
 [ext_resource type="AudioStream" uid="uid://7m1u6bw73xx2" path="res://Intro/sfx/1-01. Intro.wav" id="1_vrsr8"]
+[ext_resource type="PackedScene" uid="uid://djl1ua8l86r0e" path="res://Intro/player/player.tscn" id="2_yaevw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_doqwu"]
 
@@ -9,6 +10,7 @@
 [node name="IntroScene" type="Node3D" unique_id=772025566]
 
 [node name="cube" type="StaticBody3D" parent="." unique_id=176341638]
+transform = Transform3D(10.34391, 0, 0, 0, 0.39044094, 0, 0, 0, 10.34391, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="cube" unique_id=860291232]
 shape = SubResource("BoxShape3D_doqwu")
@@ -16,13 +18,18 @@ shape = SubResource("BoxShape3D_doqwu")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="cube" unique_id=1513588932]
 mesh = SubResource("BoxMesh_doqwu")
 
-[node name="101_Intro" type="AudioStreamPlayer3D" parent="." unique_id=494027626]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12529945, 1.14, 0.11359048)
+[node name="Player" parent="." unique_id=898371085 instance=ExtResource("2_yaevw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4488883, 1.1952205, 0.37822205)
+
+[node name="Camera3D" type="Camera3D" parent="Player" unique_id=1648498710]
+transform = Transform3D(1, 0, 0, 0, 0.90630776, 0.42261827, 0, -0.42261827, 0.90630776, 0, 2, 2)
+
+[node name="AudioListener3D" type="AudioListener3D" parent="Player/Camera3D" unique_id=1978565604]
+current = true
+
+[node name="101_Intro" type="AudioStreamPlayer3D" parent="Player" unique_id=494027626]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32358885, -0.055220127, -0.26463157)
 stream = ExtResource("1_vrsr8")
 autoplay = true
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1648498710]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7477323, 1.6789889)
-
-[node name="AudioListener3D" type="AudioListener3D" parent="Camera3D" unique_id=1978565604]
-current = true
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=556837471]
