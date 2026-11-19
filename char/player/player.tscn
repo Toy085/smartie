@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://i42g6gmju8gr" path="res://assets/kenney/kenney_tiny-city/Tiles/tile_0120.png" id="1_g708d"]
 [ext_resource type="Script" uid="uid://ksk8yevyx4s8" path="res://scripts/player/movement.gd" id="1_tklbj"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_doqwu"]
-size = Vector2(16, 16)
+[sub_resource type="CircleShape2D" id="CircleShape2D_ka884"]
+radius = 8.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_doqwu"]
 animations = [{
@@ -21,7 +21,7 @@ animations = [{
 script = ExtResource("1_tklbj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=814268004]
-shape = SubResource("RectangleShape2D_doqwu")
+shape = SubResource("CircleShape2D_ka884")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=187927847]
 sprite_frames = SubResource("SpriteFrames_doqwu")
