@@ -219,6 +219,12 @@ radius = 0.41503906
 [sub_resource type="BoxShape3D" id="BoxShape3D_m15cp"]
 size = Vector3(0.93359375, 1.1192627, 1.9698486)
 
+[sub_resource type="Environment" id="Environment_doqwu"]
+background_energy_multiplier = 0.0
+ambient_light_source = 1
+ambient_light_energy = 0.0
+glow_enabled = true
+
 [node name="IntroScene" type="Node3D" unique_id=772025566]
 script = ExtResource("1_n5qpo")
 
@@ -276,3 +282,13 @@ shape = SubResource("CylinderShape3D_ak13p")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="officeDesk/StaticBody3D" unique_id=811971845]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.033203125, 0.59625244, -0.08538818)
 shape = SubResource("BoxShape3D_m15cp")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=223850018]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 3.8497941, 5.1955376, 0)
+light_energy = 6.0
+light_size = 0.3
+light_specular = 3.0
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1712802795]
+environment = SubResource("Environment_doqwu")
