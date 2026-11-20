@@ -12,6 +12,7 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		rotate_y(deg_to_rad(event.relative.x * -mouse_sens))
 		head.rotate_x(deg_to_rad(event.relative.y * -mouse_sens))
+		head.rotation.x = clampf(head.rotation.x, deg_to_rad(-89), deg_to_rad(89))
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
