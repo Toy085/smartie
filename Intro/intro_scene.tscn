@@ -5,9 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://djl1ua8l86r0e" path="res://Intro/player/player.tscn" id="2_yaevw"]
 [ext_resource type="PackedScene" uid="uid://k1fk42lel0uu" path="res://Intro/assets/models/office_desk.res" id="4_lcvdj"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_doqwu"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_oxqbs"]
+size = Vector3(1, 0, 1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_doqwu"]
+[sub_resource type="PlaneMesh" id="PlaneMesh_lcvdj"]
+size = Vector2(1, 1)
 
 [sub_resource type="Animation" id="Animation_n5qpo"]
 length = 0.001
@@ -221,13 +223,13 @@ size = Vector3(0.93359375, 1.1192627, 1.9698486)
 script = ExtResource("1_n5qpo")
 
 [node name="cube" type="StaticBody3D" parent="." unique_id=176341638]
-transform = Transform3D(10.34391, 0, 0, 0, 0.39044094, 0, 0, 0, 10.34391, 0, 0, 0)
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="cube" unique_id=860291232]
-shape = SubResource("BoxShape3D_doqwu")
+shape = SubResource("BoxShape3D_oxqbs")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="cube" unique_id=1513588932]
-mesh = SubResource("BoxMesh_doqwu")
+mesh = SubResource("PlaneMesh_lcvdj")
 
 [node name="Player" parent="." unique_id=898371085 instance=ExtResource("2_yaevw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4488883, 1.1952205, 0.37822205)
