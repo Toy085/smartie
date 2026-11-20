@@ -4,6 +4,7 @@ extends Node2D
 @onready var wife: CharacterBody2D = $Wife
 @onready var player: CharacterBody2D = $Player
 @onready var dialogue_actionable_2d: DialogueActionable2D = $Wife/DialogueActionable2D
+@onready var texture_rect: TextureRect = $CanvasLayer/TextureRect
 
 @export var waypoints: Array[Node2D]
 @export var dialogues: Array[DialogueResource]
@@ -29,3 +30,11 @@ func move_wife(num: int):
 		dialogue_actionable_2d.dialogue_resource = dialogues[1]
 		await get_tree().create_timer(0.5).timeout
 		player._on_dialogue_end()
+
+func toggle_image():
+	if texture_rect.modulate.a < 255:
+		texture_rect.visible = true
+		texture_rect.modulate.a = 255
+		return
+	texture_rect.visible = false
+	texture_rect.modulate.a = 0

@@ -10,6 +10,7 @@
 [ext_resource type="Resource" uid="uid://dd8kfpeae7yxg" path="res://Dialogues/scene_1/Greeting.dialogue" id="5_t6bmd"]
 [ext_resource type="Script" uid="uid://cd3222nx3y3k5" path="res://addons/dialogue_manager/nodes/context/dialogue_state_context.gd" id="7_d7a6c"]
 [ext_resource type="Script" uid="uid://dd3dlf2qiudak" path="res://scripts/move_to.gd" id="8_g2j0d"]
+[ext_resource type="Texture2D" uid="uid://clb5u310ffeed" path="res://assets/images/Welsh_Springer_Spaniel_1.jpg" id="11_ig65t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_doqwu"]
 size = Vector2(24, 24)
@@ -103,3 +104,21 @@ target = Vector2(128, -70)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MoveToFirstFloor" unique_id=1579432088]
 shape = SubResource("RectangleShape2D_m15cp")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1929692116]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=2102421927]
+visible = false
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 90.0
+offset_top = 10.0
+offset_right = -50.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_ig65t")
+expand_mode = 2
+stretch_mode = 5
