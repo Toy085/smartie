@@ -18,9 +18,9 @@ func get_input():
 		if actionables.size() > 0 && not in_dialouge:
 			actionables[0].action()
 			in_dialouge = true
-			if actionables[0].dialogue_ended.is_connected(_on_dialouge_end):
-				actionables[0].dialogue_ended.disconnect(_on_dialouge_end) # Fix this mess
-			actionables[0].dialogue_ended.connect(_on_dialouge_end)
+			if actionables[0].dialogue_ended.is_connected(_on_dialogue_end):
+				actionables[0].dialogue_ended.disconnect(_on_dialogue_end) # Fix this mess
+			actionables[0].dialogue_ended.connect(_on_dialogue_end)
 			return
 		actionables = action_area.get_overlapping_areas()
 		if actionables.size() > 0:
@@ -32,7 +32,7 @@ func _physics_process(_delta):
 	get_input()
 	move_and_slide()
 
-func _on_dialouge_end():
+func _on_dialogue_end():
 	talk_delay.start()
 	await talk_delay.timeout
 	in_dialouge = false

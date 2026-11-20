@@ -7,7 +7,7 @@ extends CharacterBody2D
 
 func _physics_process(_delta: float):
 	var dir = to_local(navigation_agent_2d.get_next_path_position()).normalized()
-	if position.distance_to(navigation_agent_2d.target_position) < 1:
+	if position.distance_to(navigation_agent_2d.target_position) < 2:
 		navigation_agent_2d.set_target_position(position)
 	velocity = dir * speed
 	move_and_slide()

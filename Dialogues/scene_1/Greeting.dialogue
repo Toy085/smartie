@@ -5,5 +5,5 @@ Kone: [[Hi|Hallo]], hvorfor er du hjemme så tidlig?
 - Ingen var på jobb
 	Kone: [i]Huh,[/i] det er rart
 Kone: Uansett, kom med meg. Jeg vil vise deg noe
-do world._move_wife(0)
+do world.move_wife(0)
 => END
