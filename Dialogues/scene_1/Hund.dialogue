@@ -4,16 +4,19 @@ Kone: [wave]Se på den![/wave]
 Kone: Er den ikke sikkelig søt?
 Kone: Kan vi få en [rainbow freq=1.0 sat=0.8 val=0.8 speed=1.0]Welsh springer spaniel[/rainbow]?
 - Jo, men skal vi virkelig få en hund?
-	Kone: Kom igjen, please
+	Kone: Kom igjen, [wave]please[/wave]
 	- Nei, vi skal ikke få en hund
-		=> END
+		%2
+			=> END
+		%
+			=> ingen_hund
 	- Ok, la meg ringe oppdretteren
 		Kone: Yayyy!
 		=> faa_Hund
 - Nei, vi trenger ikke en hund.
 	Kone: Kom igjen, please
 	- Nei
-		=> END
+		=> ingen_hund
 	- La meg få tenke over dette
 		Kone: Ok
 		=> END
@@ -27,3 +30,8 @@ Hallo, dette er Stanley
 Har dere en [i]Welsh springer spaniel[/i]?
 Oppdretteren: Beklager Stanley, vi har ikke den.
 Oppdretteren: Welsh springer spaniel er faktisk vårt…
+=> END
+
+~ ingen_hund
+Hadde
+=> END
