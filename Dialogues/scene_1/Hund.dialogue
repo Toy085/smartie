@@ -24,14 +24,14 @@ Kone: Kan vi få en [rainbow freq=1.0 sat=0.8 val=0.8 speed=1.0]Welsh springer s
 		do world.toggle_image()
 		=> END
 - Det er en god idea.
-	Har du nummeret til oppdretteren?
+	Stanley: Har du nummeret til oppdretteren?
 	Kone: Yep, det er [tornado radius=2.0 freq=5.0 connected=1][fade start=1 length=8]412 34 567[/fade][/tornado]
 	=> faa_Hund
 
 ~ faa_Hund
 do world.toggle_image()
-Hallo, dette er Stanley
-Har dere en [i]Welsh springer spaniel[/i]?
+Stanley: Hallo, dette er Stanley
+Stanley: Har dere en [i]Welsh springer spaniel[/i]?
 Oppdretteren: Beklager Stanley, vi har ikke den.
 Oppdretteren: Welsh springer spaniel er faktisk vårt…
 => END
