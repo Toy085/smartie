@@ -97,6 +97,7 @@ shape = SubResource("RectangleShape2D_m15cp")
 [node name="MoveToFirstFloor" type="Area2D" parent="." unique_id=999631814]
 position = Vector2(128, -342)
 script = ExtResource("8_g2j0d")
+target = Vector2(128, -70)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MoveToFirstFloor" unique_id=1579432088]
 shape = SubResource("RectangleShape2D_m15cp")
