@@ -3,7 +3,8 @@ extends Node3D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 func _ready() -> void:
-	animation_player.play("intro_cutscene")
+	#animation_player.play("intro_cutscene")
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

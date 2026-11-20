@@ -232,9 +232,6 @@ mesh = SubResource("BoxMesh_doqwu")
 [node name="Player" parent="." unique_id=898371085 instance=ExtResource("2_yaevw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4488883, 1.1952205, 0.37822205)
 
-[node name="Camera3D" type="Camera3D" parent="Player" unique_id=1648498710]
-transform = Transform3D(1, 0, 0, 0, 0.90630776, 0.42261827, 0, -0.42261827, 0.90630776, 0, 2, 2)
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=556837471]
 transform = Transform3D(1, 0, 0, 0, 0.49999997, 0.86602545, 0, -0.86602545, 0.49999997, 0, 0, 0)
 
@@ -243,8 +240,7 @@ root_node = NodePath("../DirectionalLight3D")
 libraries/ = SubResource("AnimationLibrary_n5qpo")
 
 [node name="cutscene" type="Camera3D" parent="." unique_id=2085743612]
-transform = Transform3D(-0.9969167, -0.022284465, -0.07523178, 0, 0.95882046, -0.28401294, 0.078462824, -0.28313732, -0.9558644, -4.483082, 4.982551, 7.8682604)
-current = true
+transform = Transform3D(-0.99691665, -0.022284465, -0.07523178, 0, 0.95882046, -0.28401294, 0.07846282, -0.28313732, -0.9558644, -4.483082, 4.982551, 7.8682604)
 
 [node name="101_Intro" type="AudioStreamPlayer3D" parent="cutscene" unique_id=494027626]
 stream = ExtResource("1_vrsr8")
