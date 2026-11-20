@@ -11,4 +11,3 @@ func _physics_process(_delta: float):
 
 func set_target(target: Vector2):
 	navigation_agent_2d.set_target_position(target)
-	print(target)

@@ -12,7 +12,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	pass
+	if not wife:
+		return
+	if wife.position.distance_to(waypoints[0].position) < 1:
+		wife.queue_free()
 
 func _move_wife():
 	wife.set_target(waypoints[0].position)
