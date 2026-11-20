@@ -1,5 +1,7 @@
 ~ start
-Kone: [[Hi|Hallo]], du er endelig hjemme.
-Kone: JEg vil ha en hund
-
+Kone: [[Hi|Hallo]], hvorfor er du hjemme så tidlig?
+- Jeg ble ferdig med all oppgavene mine tidlig
+	Kone: Det er bra!
+- Ingen var på jobb
+	Kone: [i]Huh,[/i] det er rart
 => END
