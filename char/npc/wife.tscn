@@ -7,6 +7,8 @@
 radius = 7.0
 height = 16.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_doqwu"]
+
 [node name="Wife" type="CharacterBody2D" unique_id=45592724]
 script = ExtResource("1_hdnwe")
 
@@ -18,3 +20,8 @@ shape = SubResource("CapsuleShape2D_doqwu")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=706300228]
 debug_path_custom_color = Color(1, 0, 0, 1)
+
+[node name="InteractionArea2D" type="Area2D" parent="." unique_id=1734058373]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea2D" unique_id=1350814300]
+shape = SubResource("RectangleShape2D_doqwu")
