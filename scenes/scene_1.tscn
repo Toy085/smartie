@@ -26,22 +26,25 @@ tile_set = ExtResource("1_ka884")
 tile_map_data = PackedByteArray("AAACAAEAAAAFAAMAAAABAAEAAAAEAAMAAAD8//7/AAASAAoAAAA=")
 tile_set = ExtResource("1_ka884")
 
-[node name="Node2D" parent="." unique_id=1534527947 instance=ExtResource("1_ta4h7")]
+[node name="Player" parent="." unique_id=1534527947 instance=ExtResource("1_ta4h7")]
 position = Vector2(32, 22)
 
-[node name="Camera2D" type="Camera2D" parent="Node2D" unique_id=336395612]
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=336395612]
 zoom = Vector2(2, 2)
 limit_enabled = false
 position_smoothing_enabled = true
 
-[node name="Node2D2" parent="." unique_id=1863178936 instance=ExtResource("3_cn2eb")]
+[node name="Wife" parent="." unique_id=1863178936 instance=ExtResource("3_cn2eb")]
 position = Vector2(-16, -8)
 
-[node name="DialogueActionable2D" type="Area2D" parent="." unique_id=1260385867]
+[node name="DialogueActionable2D" type="Area2D" parent="Wife" unique_id=1260385867]
+position = Vector2(16, 8)
+collision_layer = 16
+collision_mask = 16
 script = ExtResource("4_lki8s")
 dialogue_resource = ExtResource("5_t6bmd")
 dialogue_cue = "start"
 metadata/_custom_type_script = "uid://cqcur1rm7433g"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueActionable2D" unique_id=129924209]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wife/DialogueActionable2D" unique_id=129924209]
 shape = SubResource("RectangleShape2D_doqwu")
