@@ -1,6 +1,17 @@
 extends CharacterBody3D
 
-const SPEED = 5.0
+@export var SPEED: float = 5.0
+@export var mouse_sens: float = 0.25
+
+@onready var head: Node3D = $Head
+
+func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseMotion:
+		rotate_y(deg_to_rad(event.relative.x * -mouse_sens))
+		head.rotate_x(deg_to_rad(event.relative.y * -mouse_sens))
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():

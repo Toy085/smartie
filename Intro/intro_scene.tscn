@@ -240,7 +240,7 @@ root_node = NodePath("../DirectionalLight3D")
 libraries/ = SubResource("AnimationLibrary_n5qpo")
 
 [node name="cutscene" type="Camera3D" parent="." unique_id=2085743612]
-transform = Transform3D(-0.99691665, -0.022284465, -0.07523178, 0, 0.95882046, -0.28401294, 0.07846282, -0.28313732, -0.9558644, -4.483082, 4.982551, 7.8682604)
+transform = Transform3D(-0.99691653, -0.022284465, -0.07523178, 0, 0.95882046, -0.28401294, 0.07846281, -0.28313732, -0.9558644, -4.483082, 4.982551, 7.8682604)
 
 [node name="101_Intro" type="AudioStreamPlayer3D" parent="cutscene" unique_id=494027626]
 stream = ExtResource("1_vrsr8")
