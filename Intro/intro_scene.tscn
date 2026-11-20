@@ -210,6 +210,13 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_gkj4b")
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ak13p"]
+height = 0.87597656
+radius = 0.41503906
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m15cp"]
+size = Vector3(0.93359375, 1.1192627, 1.9698486)
+
 [node name="IntroScene" type="Node3D" unique_id=772025566]
 script = ExtResource("1_n5qpo")
 
@@ -254,8 +261,20 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="officeDesk" parent="." unique_id=1723514240 instance=ExtResource("4_lcvdj")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 3.3999407, 0, 0)
 
 [node name="Officechair1228C6_StaticMeshComponent0" type="MeshInstance3D" parent="officeDesk" unique_id=1831624319]
-transform = Transform3D(0.08715618, 0, 0.9961947, 0, 1, 0, -0.9961947, 0, 0.08715618, 0, 0, 0)
+transform = Transform3D(0.08715618, 0, 0.9961947, 0, 1, 0, -0.9961947, 0, 0.08715618, -0.685235, 0, 0)
 mesh = SubResource("ArrayMesh_ebaqr")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="officeDesk/Officechair1228C6_StaticMeshComponent0" unique_id=1170117331]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="officeDesk/Officechair1228C6_StaticMeshComponent0/StaticBody3D" unique_id=567177117]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5620117, 0)
+shape = SubResource("CylinderShape3D_ak13p")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="officeDesk" unique_id=48075332]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="officeDesk/StaticBody3D" unique_id=811971845]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.033203125, 0.59625244, -0.08538818)
+shape = SubResource("BoxShape3D_m15cp")
