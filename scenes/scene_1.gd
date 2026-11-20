@@ -27,4 +27,5 @@ func move_wife(num: int):
 	if num == 0:
 		wife.set_target(waypoints[0].position)
 		dialogue_actionable_2d.dialogue_resource = dialogues[1]
+		await get_tree().create_timer(0.5).timeout
 		player._on_dialogue_end()
