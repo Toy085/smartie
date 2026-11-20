@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://cqcur1rm7433g" path="res://addons/dialogue_manager/nodes/actionable/dialogue_actionable_2d.gd" id="4_lki8s"]
 [ext_resource type="Resource" uid="uid://dd8kfpeae7yxg" path="res://Dialogues/scene_1/Greeting.dialogue" id="5_t6bmd"]
 [ext_resource type="Script" uid="uid://cd3222nx3y3k5" path="res://addons/dialogue_manager/nodes/context/dialogue_state_context.gd" id="7_d7a6c"]
+[ext_resource type="Script" uid="uid://dd3dlf2qiudak" path="res://scripts/move_to.gd" id="8_g2j0d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_doqwu"]
 size = Vector2(24, 24)
@@ -17,6 +18,9 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Arr
 outlines = Array[PackedVector2Array]([PackedVector2Array(-150, -417, -113, 24, 180, 26, 193, -415)])
 source_geometry_mode = 2
 agent_radius = 5.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m15cp"]
+size = Vector2(32, 20)
 
 [node name="World" type="Node2D" unique_id=294637574 node_paths=PackedStringArray("waypoints")]
 script = ExtResource("1_t6bmd")
@@ -67,6 +71,9 @@ shape = SubResource("RectangleShape2D_doqwu")
 [node name="wp-1" type="Marker2D" parent="waypoints" unique_id=1718552780]
 position = Vector2(128, -64)
 
+[node name="wp-2" type="Marker2D" parent="waypoints" unique_id=1722662988]
+position = Vector2(128, -340)
+
 [node name="DialogueStateContext" type="Node" parent="." unique_id=319843020 node_paths=PackedStringArray("target")]
 script = ExtResource("7_d7a6c")
 alias = "world"
@@ -75,3 +82,18 @@ metadata/_custom_type_script = "uid://cd3222nx3y3k5"
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1816175930]
 navigation_polygon = SubResource("NavigationPolygon_d7a6c")
+
+[node name="MoveToSecondFloor" type="Area2D" parent="." unique_id=1327872770]
+script = ExtResource("8_g2j0d")
+target = Vector2(128, -340)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MoveToSecondFloor" unique_id=72489524]
+position = Vector2(128, -70)
+shape = SubResource("RectangleShape2D_m15cp")
+
+[node name="MoveToFirstFloor" type="Area2D" parent="." unique_id=999631814]
+position = Vector2(128, -342)
+script = ExtResource("8_g2j0d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MoveToFirstFloor" unique_id=1579432088]
+shape = SubResource("RectangleShape2D_m15cp")

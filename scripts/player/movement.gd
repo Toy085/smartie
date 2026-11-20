@@ -3,6 +3,7 @@ extends CharacterBody2D
 @export var speed = 100
 
 @onready var talk_area: Area2D = $TalkArea
+@onready var action_area: Area2D = $ActionArea
 @onready var talk_delay: Timer = $TalkDelay
 
 var in_dialouge: bool = false
@@ -20,6 +21,10 @@ func get_input():
 			if actionables[0].dialogue_ended.is_connected(_on_dialouge_end):
 				actionables[0].dialogue_ended.disconnect(_on_dialouge_end) # Fix this mess
 			actionables[0].dialogue_ended.connect(_on_dialouge_end)
+			return
+		actionables = action_area.get_overlapping_areas()
+		if actionables.size() > 0:
+			actionables[0].move_to(self)
 
 func _physics_process(_delta):
 	get_input()

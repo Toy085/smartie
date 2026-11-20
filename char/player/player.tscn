@@ -37,6 +37,11 @@ collision_mask = 16
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TalkArea" unique_id=985391361]
 shape = SubResource("CircleShape2D_doqwu")
 
+[node name="ActionArea" type="Area2D" parent="." unique_id=2109183016]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionArea" unique_id=625462412]
+shape = SubResource("CircleShape2D_doqwu")
+
 [node name="TalkDelay" type="Timer" parent="." unique_id=995859049]
 wait_time = 0.5
 one_shot = true
