@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://ddqhecn4v872q"
+path="res://.godot/imported/Hund.dialogue-72744f14f1f115afb1bf5d5b6de8a46c.tres"
+
+[deps]
+
+source_file="res://Dialogues/scene_1/Hund.dialogue"
+dest_files=["res://.godot/imported/Hund.dialogue-72744f14f1f115afb1bf5d5b6de8a46c.tres"]
+
+[params]
+
+defaults=true

@@ -5,12 +5,11 @@ extends Node2D
 
 @export var waypoints: Array[Node2D]
 
-# Called when the node enters the scene tree for the first time.
+var dialouge: int = 0
+
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if not wife:
 		return
@@ -18,5 +17,6 @@ func _process(_delta: float) -> void:
 		wife.interact_move()
 		wife.set_target(waypoints[1].position)
 
-func _move_wife():
-	wife.set_target(waypoints[0].position)
+func _move_wife(num: int):
+	if num == 0:
+		wife.set_target(waypoints[0].position)

@@ -1,0 +1,26 @@
+~ start
+Kone: [wave]Se på den![/wave]
+~ begging
+Kone: Er den ikke sikkelig søt?
+Kone: Kan vi få en [rainbow freq=1.0 sat=0.8 val=0.8 speed=1.0]Welsh springer spaniel[/rainbow]?
+- Jo, men skal vi virkelig få en hund?
+	Kone: Kom igjen, please
+	- Nei, vi skal ikke få en hund
+		=> END
+	- Ok, la meg ringe oppdretteren
+		Kone: Yayyy!
+		=> faa_Hund
+- Nei, vi trenger ikke en hund.
+	Kone: Kom igjen, please
+	- Nei
+		=> END
+	- La meg få tenke over dette
+		Kone: Ok
+		=> END
+- Det er en god idea.
+	Har du nummeret til oppdretteren?
+	Kone: Yep, det er [tornado radius=2.0 freq=5.0 connected=1][fade start=1 length=8]412 34 567[/fade][/tornado]
+	=> faa_Hund
+
+~ faa_Hund
+Hallo, dette er Stanley
