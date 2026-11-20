@@ -3,6 +3,7 @@ extends CharacterBody2D
 @export var speed = 100
 
 @onready var talk_area: Area2D = $TalkArea
+@onready var talk_delay: Timer = $TalkDelay
 
 var in_dialouge: bool = false
 
@@ -17,7 +18,7 @@ func get_input():
 			actionables[0].action()
 			in_dialouge = true
 			if actionables[0].dialogue_ended.is_connected(_on_dialouge_end):
-				actionables[0].dialogue_ended.disconnect(_on_dialouge_end)
+				actionables[0].dialogue_ended.disconnect(_on_dialouge_end) # Fix this mess
 			actionables[0].dialogue_ended.connect(_on_dialouge_end)
 
 func _physics_process(_delta):
@@ -25,4 +26,6 @@ func _physics_process(_delta):
 	move_and_slide()
 
 func _on_dialouge_end():
+	talk_delay.start()
+	await talk_delay.timeout
 	in_dialouge = false
