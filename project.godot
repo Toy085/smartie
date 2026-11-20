@@ -19,6 +19,13 @@ config/icon="res://icon.svg"
 
 DialogueManager="*uid://c3rodes2l3gxb"
 
+[display]
+
+window/size/viewport_width=640
+window/size/viewport_height=360
+window/stretch/mode="canvas_items"
+window/stretch/scale_mode="integer"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/at-icons/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg", "res://addons/mx_creative_console/plugin.cfg")
