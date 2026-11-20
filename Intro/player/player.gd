@@ -1,9 +1,12 @@
 extends CharacterBody3D
 
-@export var SPEED: float = 5.0
+@export var speed: float = 5.0
 @export var mouse_sens: float = 0.25
 
 @onready var head: Node3D = $Head
+
+var lerp_speed: float = 10.0
+var dir: Vector3 = Vector3.ZERO
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -21,12 +24,12 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 
 	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
+	dir = lerp(dir, transform.basis * Vector3(input_dir.x, 0, input_dir.y).normalized(), lerp_speed * delta)
+	if dir:
+		velocity.x = dir.x * speed
+		velocity.z = dir.z * speed
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, speed)
+		velocity.z = move_toward(velocity.z, 0, speed)
 
 	move_and_slide()
