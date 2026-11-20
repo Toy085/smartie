@@ -1,3 +1,4 @@
+@icon("res://addons/at-icons/node2d/human.svg")
 extends CharacterBody2D
 
 @export var speed = 100
