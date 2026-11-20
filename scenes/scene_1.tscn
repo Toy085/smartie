@@ -7,6 +7,7 @@
 [ext_resource type="Resource" uid="uid://dd8kfpeae7yxg" path="res://Dialogues/scene_1/Greeting.dialogue" id="5_t6bmd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_doqwu"]
+size = Vector2(24, 24)
 
 [node name="Node2D" type="Node2D" unique_id=294637574]
 
@@ -47,4 +48,5 @@ dialogue_cue = "start"
 metadata/_custom_type_script = "uid://cqcur1rm7433g"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wife/DialogueActionable2D" unique_id=129924209]
+position = Vector2(-12, -4)
 shape = SubResource("RectangleShape2D_doqwu")
