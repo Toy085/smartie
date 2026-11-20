@@ -27,6 +27,8 @@ func get_input():
 			actionables[0].move_to(self)
 
 func _physics_process(_delta):
+	if in_dialouge:
+		return
 	get_input()
 	move_and_slide()
 
