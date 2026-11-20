@@ -1,15 +1,21 @@
 [gd_scene format=3 uid="uid://d2y4l136tjpqw"]
 
 [ext_resource type="Texture2D" uid="uid://ofva5f2nolhv" path="res://assets/kenney/kenney_tiny-city/Tiles/tile_0108.png" id="1_25toj"]
+[ext_resource type="Script" uid="uid://b7yqkqe3lae4g" path="res://scripts/wife.gd" id="1_hdnwe"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_doqwu"]
 radius = 7.0
 height = 16.0
 
-[node name="Wife" type="Node2D" unique_id=1863178936]
+[node name="Wife" type="CharacterBody2D" unique_id=45592724]
+script = ExtResource("1_hdnwe")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1803526329]
 texture = ExtResource("1_25toj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=102414646]
 shape = SubResource("CapsuleShape2D_doqwu")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=706300228]
+debug_enabled = true
+debug_path_custom_color = Color(1, 0, 0, 1)

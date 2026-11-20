@@ -4,4 +4,6 @@ Kone: [[Hi|Hallo]], hvorfor er du hjemme så tidlig?
 	Kone: Det er bra!
 - Ingen var på jobb
 	Kone: [i]Huh,[/i] det er rart
+Kone: Uansett, kom med meg. Jeg vil vise deg noe
+$> world._move_wife()
 => END
