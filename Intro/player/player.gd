@@ -9,6 +9,8 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("pause"):
+		get_tree().quit()
 	if event is InputEventMouseMotion:
 		rotate_y(deg_to_rad(event.relative.x * -mouse_sens))
 		head.rotate_x(deg_to_rad(event.relative.y * -mouse_sens))
