@@ -36,6 +36,10 @@ window/stretch/scale_mode="integer"
 
 enabled=PackedStringArray("res://addons/at-icons/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg", "res://addons/mx_creative_console/plugin.cfg")
 
+[global_group]
+
+player=""
+
 [input]
 
 ui_left={

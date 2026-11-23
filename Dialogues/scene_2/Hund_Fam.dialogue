@@ -1,4 +1,15 @@
 ~ start
 Hi, det er …
-do TransitionLayer.fade(1.0)
-=> END
+Det har vært mye problmere
+skilsmisse, sykdommer og sånt.
+Det har ført til at vi kan ikke lenger ta være på hunden vår.
+Så jeg tenkte at kanskje dere vil ha en hund.
+- Hvilken hundrase er den?
+	Det er en [i]Welsh springer spaniel[/i]
+Så?
+- Vi vil gjerne …
+	do TransitionLayer.fade(1.0)
+	=> END
+- Beklager, men vi må takke nei.
+	do Global.do_ending(1)
+	=> END
