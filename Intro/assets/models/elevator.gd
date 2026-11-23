@@ -5,3 +5,8 @@ extends Node3D
 
 func open_door():
 	animation_player.play("opening")
+	await animation_player.animation_finished
+
+func close_door():
+	animation_player.play("closing")
+	await animation_player.animation_finished
