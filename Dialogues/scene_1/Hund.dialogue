@@ -9,7 +9,7 @@ Kone: Kan vi få en [rainbow freq=1.0 sat=0.8 val=0.8 speed=1.0]Welsh springer s
 	- Nei, vi skal ikke få en hund
 		%2
 			do world.toggle_image()
-			do TransitionLayer.fade(1.0)
+			do Global.change_scene("res://scenes/scene_2.tscn")
 			=> END
 		%
 			=> ingen_hund
@@ -23,7 +23,7 @@ Kone: Kan vi få en [rainbow freq=1.0 sat=0.8 val=0.8 speed=1.0]Welsh springer s
 	- La meg få tenke over dette
 		Kone: Ok
 		do world.toggle_image()
-		do TransitionLayer.fade(1.0)
+		do Global.change_scene("res://scenes/scene_2.tscn")
 		=> END
 - Det er en god idea.
 	Stanley: Har du nummeret til oppdretteren?
@@ -38,7 +38,7 @@ Oppdretteren: Beklager Stanley, vi har ikke den.
 Oppdretteren: Welsh springer spaniel er faktisk vårt…
 Oppdretteren: Vi kan godt sette deg på ventelista hvis du vil.
 Stanley: [[Gjør det|Gjerne]]
-do TransitionLayer.fade(1.0)
+do Global.change_scene("res://scenes/scene_2.tscn")
 => END
 
 ~ ingen_hund
