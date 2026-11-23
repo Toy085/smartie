@@ -24,9 +24,6 @@ func _input(event: InputEvent) -> void:
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-	
-	if position.y < -5:
-		Global.change_scene("res://scenes/scene_1.tscn")
 
 	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	dir = lerp(dir, transform.basis * Vector3(input_dir.x, 0, input_dir.y).normalized(), lerp_speed * delta)
