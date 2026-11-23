@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://dw600rsuj7b7d"
+path="res://.godot/imported/Wife_Hund.dialogue-9e1e86f1a9a3b2157924f3ccf4725500.tres"
+
+[deps]
+
+source_file="res://Dialogues/scene_2/Wife_Hund.dialogue"
+dest_files=["res://.godot/imported/Wife_Hund.dialogue-9e1e86f1a9a3b2157924f3ccf4725500.tres"]
+
+[params]
+
+defaults=true

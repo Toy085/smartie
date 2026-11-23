@@ -5,6 +5,7 @@ const SAVE_PATH := "user://"
 
 var current_scene: int = 0
 var fikk_hund: bool = false
+var tell_wife: bool = false
 
 var is_mobile_os = OS.has_feature("mobile") or OS.has_feature("web_android") or OS.has_feature("web_ios")
 var is_web = OS.has_feature("web")

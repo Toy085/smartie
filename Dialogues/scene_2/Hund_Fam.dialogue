@@ -8,8 +8,10 @@ Så jeg tenkte at kanskje dere vil ha en hund.
 	Det er en [i]Welsh springer spaniel[/i]
 Så?
 - Vi vil gjerne …
-	do TransitionLayer.fade(1.0)
+	do Global.tell_wife = true
 	=> END
 - Beklager, men vi må takke nei.
 	do Global.do_ending(1)
+- La meg få snakke med kona mi.
+	Ok, bare ring tilbake.
 	=> END

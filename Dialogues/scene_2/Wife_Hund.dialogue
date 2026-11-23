@@ -1,0 +1,8 @@
+~ start
+if not Global.tell_wife
+	Fortell Kone hva du hørte?
+	- Ja
+	- Nei
+else
+	Stanely: Gjett
+=> END
