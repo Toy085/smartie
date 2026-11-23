@@ -9,3 +9,5 @@ func _ready() -> void:
 	await TransitionLayer.fade(0.0).finished
 	player.in_dialouge = true
 	DialogueManager.show_dialogue_balloon(dialogues[0])
+	await DialogueManager.dialogue_ended
+	player.in_dialouge = false
