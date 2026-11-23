@@ -36,6 +36,9 @@ Stanley: Hallo, dette er Stanley
 Stanley: Har dere en [i]Welsh springer spaniel[/i]?
 Oppdretteren: Beklager Stanley, vi har ikke den.
 Oppdretteren: Welsh springer spaniel er faktisk vårt…
+Oppdretteren: Vi kan godt sette deg på ventelista hvis du vil.
+Stanley: [[Gjør det|Gjerne]]
+do TransitionLayer.fade(1.0)
 => END
 
 ~ ingen_hund
