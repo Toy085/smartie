@@ -2,7 +2,15 @@
 if not Global.tell_wife
 	Fortell Kone hva du hørte?
 	- Ja
+		=> fortellHund
 	- Nei
+		do Global.do_ending(1)
+		=> END
 else
-	Stanely: Gjett
+	=> fortellHund
+=> END
+
+~ fortellHund
+Stanely: Gjett
+Kone: Hva?
 => END

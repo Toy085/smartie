@@ -1,17 +1,18 @@
 ~ start
 Hi, det er …
-Det har vært mye problmere
+Det har vært mye problmer
 skilsmisse, sykdommer og sånt.
 Det har ført til at vi kan ikke lenger ta være på hunden vår.
-Så jeg tenkte at kanskje dere vil ha en hund.
+Så vi tenkte at kanskje dere vil ha en hund.
 - Hvilken hundrase er den?
-	Det er en [i]Welsh springer spaniel[/i]
+	Det er en [i]Welsh springer spaniel.[/i]
 Så?
-- Vi vil gjerne …
+- Vi kan ta den imot.
 	do Global.tell_wife = true
 	=> END
 - Beklager, men vi må takke nei.
 	do Global.do_ending(1)
+	=> END
 - La meg få snakke med kona mi.
 	Ok, bare ring tilbake.
 	=> END
