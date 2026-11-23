@@ -38,4 +38,5 @@ Oppdretteren: Welsh springer spaniel er faktisk vårt…
 
 ~ ingen_hund
 do world.toggle_image()
+do Global.do_ending(0)
 => END
