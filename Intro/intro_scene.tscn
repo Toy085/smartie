@@ -221,7 +221,6 @@ radius = 0.3486328
 size = Vector3(0.93359375, 1.1192627, 1.9698486)
 
 [sub_resource type="Environment" id="Environment_doqwu"]
-background_energy_multiplier = 0.0
 ambient_light_source = 1
 ambient_light_energy = 0.0
 glow_enabled = true
