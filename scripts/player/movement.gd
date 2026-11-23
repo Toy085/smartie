@@ -24,7 +24,9 @@ func get_input():
 			return
 		actionables = action_area.get_overlapping_areas()
 		if actionables.size() > 0:
+			await TransitionLayer.fade(1.0, 0.5).finished
 			actionables[0].move_to(self)
+			TransitionLayer.fade(0.0)
 
 func _physics_process(_delta):
 	if in_dialouge:
