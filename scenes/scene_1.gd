@@ -12,6 +12,7 @@ extends Node2D
 var dialouge: int = 0
 
 func _ready() -> void:
+	TransitionLayer.fade(0.0)
 	dialogue_actionable_2d.dialogue_resource = dialogues[0]
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 

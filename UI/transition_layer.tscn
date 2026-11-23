@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cgar11wf3ljd4"]
+
+[ext_resource type="Script" uid="uid://usdad8roa5gk" path="res://scripts/UI/transition_layer.gd" id="1_ealvc"]
+[ext_resource type="Material" uid="uid://toa0jjdd2nfx" path="res://shaders/transition.tres" id="1_m78ct"]
+
+[node name="TransitionLayer" type="CanvasLayer" unique_id=1522782753]
+script = ExtResource("1_ealvc")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=45343006]
+material = ExtResource("1_m78ct")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)

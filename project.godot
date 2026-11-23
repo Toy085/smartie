@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 DialogueManager="*uid://c3rodes2l3gxb"
 Global="*uid://cydj6ilyqju6c"
+TransitionLayer="*uid://cgar11wf3ljd4"
 
 [dialogue_manager]
 
