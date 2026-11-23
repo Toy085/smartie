@@ -1,9 +1,11 @@
 extends Node3D
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var elevator: Node3D = $Elevator
 
 func _ready() -> void:
 	TransitionLayer.fade(0.0)
+	elevator.open_door()
 	#animation_player.play("intro_cutscene")
 
 
