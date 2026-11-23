@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://83g5jqvaulic"]
 
 [ext_resource type="Script" uid="uid://bjnn7ewq8g8fo" path="res://scenes/scene_2.gd" id="1_ccscm"]
+[ext_resource type="Script" uid="uid://dbs4435dsf3ry" path="res://addons/dialogue_manager/dialogue_resource.gd" id="2_nb8vq"]
+[ext_resource type="Resource" uid="uid://dflpfrh1tt05o" path="res://Dialogues/scene_2/Hund_Fam.dialogue" id="3_qo03w"]
 [ext_resource type="PackedScene" uid="uid://bxy626fywo2wh" path="res://scenes/Rooms/house_interior.tscn" id="5_4xuhb"]
 [ext_resource type="PackedScene" uid="uid://blxofw1bi3bvl" path="res://char/player/player.tscn" id="6_nbtma"]
 [ext_resource type="Script" uid="uid://cd3222nx3y3k5" path="res://addons/dialogue_manager/nodes/context/dialogue_state_context.gd" id="9_0xl4q"]
@@ -8,6 +10,7 @@
 
 [node name="World" type="Node2D" unique_id=294637574]
 script = ExtResource("1_ccscm")
+dialogues = Array[ExtResource("2_nb8vq")]([ExtResource("3_qo03w")])
 
 [node name="HouseInterior" parent="." unique_id=748214789 instance=ExtResource("5_4xuhb")]
 

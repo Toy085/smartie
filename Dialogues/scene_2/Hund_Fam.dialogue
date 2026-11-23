@@ -1,0 +1,4 @@
+~ start
+Hi, det er …
+do TransitionLayer.fade(1.0)
+=> END

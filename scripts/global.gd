@@ -4,6 +4,7 @@ extends Node
 const SAVE_PATH := "user://"
 
 var current_scene: int = 0
+var fikk_hund: bool = false
 
 var is_mobile_os = OS.has_feature("mobile") or OS.has_feature("web_android") or OS.has_feature("web_ios")
 var is_web = OS.has_feature("web")
@@ -22,6 +23,7 @@ func get_save(slot: int = 0) -> String:
 func save_game(slot: int = 0) -> void:
 	var data := Save.new()
 	data.current_scene = current_scene
+	data.fikk_hund = fikk_hund
 	
 	ResourceSaver.save(data, get_save(slot))
 
