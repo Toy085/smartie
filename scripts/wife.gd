@@ -6,14 +6,20 @@ extends CharacterBody2D
 
 @onready var navigation_agent_2d: NavigationAgent2D = $NavigationAgent2D
 
+var target_pos: Vector2
+func _ready() -> void:
+	target_pos = self.position
 func _physics_process(_delta: float):
 	var dir = to_local(navigation_agent_2d.get_next_path_position()).normalized()
-	if position.distance_to(navigation_agent_2d.target_position) < 2:
-		navigation_agent_2d.target_position = global_position
 	velocity = dir * speed
+	navigation_agent_2d.set_target_position(target_pos)
+	if self.position.distance_to(target_pos) < 1:
+		return
 	move_and_slide()
+	
 
 func set_target(target: Vector2):
+	target_pos = target
 	navigation_agent_2d.set_target_position(target)
 
 func interact_move():
