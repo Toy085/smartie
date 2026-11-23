@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://usdad8roa5gk" path="res://scripts/UI/transition_layer.gd" id="1_ealvc"]
 [ext_resource type="Material" uid="uid://toa0jjdd2nfx" path="res://shaders/transition.tres" id="1_m78ct"]
+[ext_resource type="Script" uid="uid://cd3222nx3y3k5" path="res://addons/dialogue_manager/nodes/context/dialogue_state_context.gd" id="3_fcso5"]
 
 [node name="TransitionLayer" type="CanvasLayer" unique_id=1522782753]
 script = ExtResource("1_ealvc")
@@ -14,3 +15,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+
+[node name="DialogueStateContext" type="Node" parent="." unique_id=2143156200 node_paths=PackedStringArray("target")]
+script = ExtResource("3_fcso5")
+alias = "TransitionLayer"
+target = NodePath("..")
+metadata/_custom_type_script = "uid://cd3222nx3y3k5"
