@@ -5,6 +5,6 @@
 [resource]
 shader = ExtResource("1_rahjc")
 shader_parameter/spacing = 25.0
-shader_parameter/animation_progress = 1.0
+shader_parameter/animation_progress = 0.0
 shader_parameter/dot_size = 1.0
 shader_parameter/dot_color = Color(0, 0, 0, 1)

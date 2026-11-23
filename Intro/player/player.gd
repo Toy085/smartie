@@ -26,9 +26,7 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 	
 	if position.y < -5:
-		await TransitionLayer.fade(1.0).finished
-		get_tree().change_scene_to_file("res://scenes/scene_1.tscn")
-		return
+		Global.change_scene("res://scenes/scene_1.tscn")
 
 	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	dir = lerp(dir, transform.basis * Vector3(input_dir.x, 0, input_dir.y).normalized(), lerp_speed * delta)

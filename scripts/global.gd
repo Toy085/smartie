@@ -8,7 +8,12 @@ var current_scene: int = 0
 var is_mobile_os = OS.has_feature("mobile") or OS.has_feature("web_android") or OS.has_feature("web_ios")
 var is_web = OS.has_feature("web")
 
+func change_scene(path: String):
+	await TransitionLayer.fade(1.0).finished
+	get_tree().change_scene_to_file(path)
+
 func do_ending(_type: int):
+	await TransitionLayer.fade(1.0).finished
 	get_tree().quit()
 
 func get_save(slot: int = 0) -> String:
