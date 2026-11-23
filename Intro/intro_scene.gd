@@ -10,12 +10,10 @@ func _ready() -> void:
 	elevator.close_door()
 	#animation_player.play("intro_cutscene")
 
-
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body in get_tree().get_nodes_in_group("player"):
 		await elevator.close_door()
 		Global.change_scene("res://scenes/scene_1.tscn")
-
 
 func _on_door_sensor_body_entered(_body: Node3D) -> void:
 	if door_open:
