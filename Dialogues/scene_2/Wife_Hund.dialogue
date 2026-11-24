@@ -13,4 +13,5 @@ else
 ~ fortellHund
 Stanely: Gjett
 Kone: Hva?
+do Global.change_scene("res://scenes/scene_3.tscn")
 => END
