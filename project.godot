@@ -34,7 +34,7 @@ window/stretch/scale_mode="integer"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/at-icons/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg", "res://addons/mx_creative_console/plugin.cfg")
+enabled=PackedStringArray("res://addons/at-icons/plugin.cfg", "res://addons/csg_blockout/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg", "res://addons/mx_creative_console/plugin.cfg")
 
 [global_group]
 
