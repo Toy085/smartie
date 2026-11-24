@@ -19,8 +19,4 @@ func _on_door_sensor_body_entered(_body: Node3D) -> void:
 	if door_open:
 		return
 	await elevator.open_door()
-
-func _on_door_sensor_body_exited(_body: Node3D) -> void:
-	if not door_open:
-		return
-	await elevator.close_door()
+	door_open = true
