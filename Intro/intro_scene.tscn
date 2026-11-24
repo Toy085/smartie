@@ -252,7 +252,7 @@ root_node = NodePath("../DirectionalLight3D")
 libraries/ = SubResource("AnimationLibrary_n5qpo")
 
 [node name="cutscene" type="Camera3D" parent="." unique_id=2085743612]
-transform = Transform3D(-0.99691576, -0.022284465, -0.07523178, 0, 0.95882046, -0.28401294, 0.07846275, -0.28313732, -0.9558644, -4.483082, 4.982551, 7.8682604)
+transform = Transform3D(-0.9969157, -0.022284465, -0.07523178, 0, 0.95882046, -0.28401294, 0.07846274, -0.28313732, -0.9558644, -4.483082, 4.982551, 7.8682604)
 
 [node name="101_Intro" type="AudioStreamPlayer3D" parent="cutscene" unique_id=494027626]
 stream = ExtResource("1_vrsr8")
@@ -311,17 +311,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.75, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8257446, 0, -0.17932129)
 shape = SubResource("BoxShape3D_doqwu")
 
-[node name="doorSensor" type="Area3D" parent="." unique_id=1835926348]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6373534, 0, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="doorSensor" unique_id=2125465825]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6525421, 1.1988456, -0.09729004)
-shape = SubResource("BoxShape3D_doqwu")
-
 [node name="Elevator" parent="." unique_id=2022597922 instance=ExtResource("5_ebaqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.770765, 0, 0)
 script = ExtResource("6_xujs1")
 
+[node name="doorSensor" type="Area3D" parent="Elevator" unique_id=1835926348]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1334114, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Elevator/doorSensor" unique_id=2125465825]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6525421, 1.1988456, -0.09729004)
+shape = SubResource("BoxShape3D_doqwu")
+
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
-[connection signal="body_entered" from="doorSensor" to="." method="_on_door_sensor_body_entered"]
-[connection signal="body_exited" from="doorSensor" to="." method="_on_door_sensor_body_exited"]
+[connection signal="body_entered" from="Elevator/doorSensor" to="." method="_on_door_sensor_body_entered"]
+[connection signal="body_exited" from="Elevator/doorSensor" to="." method="_on_door_sensor_body_exited"]
