@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://66367tjlaqym"]
+
+[ext_resource type="Script" uid="uid://d265g2k2byen0" path="res://scenes/scene_5.gd" id="1_mgkls"]
+[ext_resource type="PackedScene" uid="uid://bxy626fywo2wh" path="res://scenes/Rooms/house_interior.tscn" id="2_f8pt5"]
+[ext_resource type="Script" uid="uid://dbs4435dsf3ry" path="res://addons/dialogue_manager/dialogue_resource.gd" id="2_olxyb"]
+[ext_resource type="Resource" uid="uid://d1ce6iwmp511k" path="res://Dialogues/scene_5/dra_middag.dialogue" id="3_b5uwh"]
+[ext_resource type="PackedScene" uid="uid://blxofw1bi3bvl" path="res://char/player/player.tscn" id="3_olxyb"]
+[ext_resource type="PackedScene" uid="uid://d2y4l136tjpqw" path="res://char/npc/wife.tscn" id="4_b5uwh"]
+[ext_resource type="Script" uid="uid://cqcur1rm7433g" path="res://addons/dialogue_manager/nodes/actionable/dialogue_actionable_2d.gd" id="5_xpygp"]
+[ext_resource type="Texture2D" uid="uid://cw78xh3fbgbyt" path="res://assets/kenney/kenney_desert-shooter-pack_1.0/PNG/Players/Tiles/tile_0000.png" id="6_nyxad"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4m5or"]
+size = Vector2(24, 24)
+
+[node name="World" type="Node2D" unique_id=1904602711]
+script = ExtResource("1_mgkls")
+dialogues = Array[ExtResource("2_olxyb")]([ExtResource("3_b5uwh")])
+
+[node name="HouseInterior" parent="." unique_id=748214789 instance=ExtResource("2_f8pt5")]
+
+[node name="Player" parent="." unique_id=1534527947 instance=ExtResource("3_olxyb")]
+position = Vector2(32, 22)
+
+[node name="Wife" parent="." unique_id=45592724 instance=ExtResource("4_b5uwh")]
+position = Vector2(-10, -12)
+
+[node name="DialogueActionable2D" type="Area2D" parent="Wife" unique_id=618951394]
+position = Vector2(16, 8)
+collision_layer = 16
+collision_mask = 16
+script = ExtResource("5_xpygp")
+metadata/_custom_type_script = "uid://cqcur1rm7433g"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wife/DialogueActionable2D" unique_id=533144718]
+position = Vector2(-12, -4)
+shape = SubResource("RectangleShape2D_4m5or")
+
+[node name="Tile0000" type="Sprite2D" parent="." unique_id=449609150]
+position = Vector2(38, -7)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_nyxad")
+flip_h = true

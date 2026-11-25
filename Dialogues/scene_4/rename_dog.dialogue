@@ -1,4 +1,9 @@
 ~ start
 Nathan: Wolf > Smartie
-do Global.do_ending(2)
+- Ja
+	do Global.do_ending(2)
+	=> END
+- Nei
+	do Global.change_scene("res://scenes/scene_5.tscn")
+	=> END
 => END

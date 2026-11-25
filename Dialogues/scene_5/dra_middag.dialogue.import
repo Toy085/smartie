@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://d1ce6iwmp511k"
+path="res://.godot/imported/dra_middag.dialogue-5d628f53b1058c8613b35651cd071d4b.tres"
+
+[deps]
+
+source_file="res://Dialogues/scene_5/dra_middag.dialogue"
+dest_files=["res://.godot/imported/dra_middag.dialogue-5d628f53b1058c8613b35651cd071d4b.tres"]
+
+[params]
+
+defaults=true
