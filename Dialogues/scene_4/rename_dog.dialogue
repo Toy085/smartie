@@ -1,9 +1,10 @@
 ~ start
-Kone: Wolf > Smartie
-- Ja
+Kone: Kan vi endre navnet fra [i]Smartie[/i] til [i]Wolf[/i]
+Kone: Det er mer, [wave]eksotisk[/wave]
+- Wolf er en fin navn
 	do Global.do_ending(2)
 	=> END
-- Nei
+- Hvorfor kan han ikke hete Smartie?
 	do Global.change_scene("res://scenes/scene_5.tscn")
 	=> END
 => END
