@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://dvkpq2kw2ihc2"]
 
+[ext_resource type="Script" uid="uid://blg06neup22rr" path="res://scripts/ending_scene.gd" id="1_yyu0n"]
+[ext_resource type="AudioStream" uid="uid://duusmjvxluagm" path="res://sound/music/end.mp3" id="2_qntb2"]
+
 [node name="Ending" type="Control" unique_id=926023581]
 layout_mode = 3
 anchors_preset = 15
@@ -7,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_yyu0n")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=830558052]
 layout_mode = 1
@@ -16,3 +20,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Ending: Null"
+
+[node name="BGM_player" type="AudioStreamPlayer" parent="." unique_id=1756041620]
+stream = ExtResource("2_qntb2")

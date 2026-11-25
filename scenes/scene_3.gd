@@ -15,3 +15,6 @@ func _ready() -> void:
 	DialogueManager.show_dialogue_balloon(dialogues[0])
 	await DialogueManager.dialogue_ended
 	player.in_dialouge = false
+
+func give_dog():
+	Global.do_ending(1)

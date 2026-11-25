@@ -9,6 +9,8 @@ var current_scene: int = 0
 var fikk_hund: bool = false
 var tell_wife: bool = false
 
+var ending: int
+
 var is_mobile_os = OS.has_feature("mobile") or OS.has_feature("web_android") or OS.has_feature("web_ios")
 var is_web = OS.has_feature("web")
 
@@ -16,13 +18,10 @@ func change_scene(path: String):
 	await TransitionLayer.fade(1.0).finished
 	get_tree().change_scene_to_file(path)
 
-func do_ending(_type: int):
+func do_ending(type: int):
+	ending = type
 	await TransitionLayer.fade(1.0).finished
 	get_tree().change_scene_to_file("res://scenes/UI-based/Ending.tscn")
-	var audio = AudioStreamPlayer.new()
-	audio.stream = END
-	add_child(audio)
-	audio.play()
 
 func get_save(slot: int = 0) -> String:
 	return SAVE_PATH.path_join("save_%s.tres" % slot)
