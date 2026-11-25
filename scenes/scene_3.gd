@@ -23,4 +23,3 @@ func _ready() -> void:
 func give_dog():
 	dog.position.x = 42
 	dog.position.y = -38
-	pass

@@ -46,7 +46,7 @@ shape = SubResource("RectangleShape2D_doqwu")
 position = Vector2(128, -64)
 
 [node name="wp-2" type="Marker2D" parent="waypoints" unique_id=1722662988]
-position = Vector2(-32, -300)
+position = Vector2(-72, -296)
 
 [node name="DialogueStateContext" type="Node" parent="." unique_id=319843020 node_paths=PackedStringArray("target")]
 script = ExtResource("7_d7a6c")
