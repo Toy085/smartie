@@ -1,5 +1,5 @@
 ~ start
-Nathan: Wolf > Smartie
+Kone: Wolf > Smartie
 - Ja
 	do Global.do_ending(2)
 	=> END

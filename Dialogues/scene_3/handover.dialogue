@@ -1,8 +1,11 @@
 ~ start
 Postmann Pat: Hi, Stanley
-Postmann Pat: Tusen takk for at du tar hunden vår.
+Postmann Pat: Tusen takk for at dere tar hunden vår.
 Postmann Pat: Det var vanskelig å finne noen som kunne.
-Jente: :(
+Jente: Hun heter [i]Smartie[/i], med -ie til slutt.
+Jente: [Hvisker noe bak øret til hunden]
 do world.give_dog()
+Kone: Så godt du lukter.
+Stanley: Du er nydelig.
 do Global.change_scene("res://scenes/scene_4.tscn")
 => END
