@@ -5,6 +5,7 @@ extends Node2D
 
 @onready var car: CharacterBody2D = $Car
 @onready var familie: Node2D = $Familie
+@onready var dog: Sprite2D = $Familie/Dog
 
 var player: Player
 
@@ -20,4 +21,6 @@ func _ready() -> void:
 	await DialogueManager.dialogue_ended
 
 func give_dog():
+	dog.position.x = 42
+	dog.position.y = -38
 	pass

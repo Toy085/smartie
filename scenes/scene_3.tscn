@@ -77,7 +77,7 @@ position = Vector2(32, -46)
 [node name="Familie" type="Node2D" parent="." unique_id=793729448]
 visible = false
 
-[node name="Tile0000" type="Sprite2D" parent="Familie" unique_id=97642576]
+[node name="Dog" type="Sprite2D" parent="Familie" unique_id=97642576]
 position = Vector2(80, -30)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("9_gmcgl")
