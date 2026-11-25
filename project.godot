@@ -84,7 +84,7 @@ pause={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Dialogues/scene_1/Greeting.dialogue", "res://Dialogues/scene_1/Hund.dialogue", "res://Dialogues/scene_2/Hund_Fam.dialogue", "res://Dialogues/scene_2/Wife_Hund.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Dialogues/scene_1/Greeting.dialogue", "res://Dialogues/scene_1/Hund.dialogue", "res://Dialogues/scene_2/Hund_Fam.dialogue", "res://Dialogues/scene_2/Wife_Hund.dialogue", "res://Dialogues/scene_3/handover.dialogue")
 
 [layer_names]
 

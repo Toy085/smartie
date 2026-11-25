@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://bkkhx4gv5o4es"
+path="res://.godot/imported/handover.dialogue-ae9dcfaf71af9b4bc4febb0a54a54f6b.tres"
+
+[deps]
+
+source_file="res://Dialogues/scene_3/handover.dialogue"
+dest_files=["res://.godot/imported/handover.dialogue-ae9dcfaf71af9b4bc4febb0a54a54f6b.tres"]
+
+[params]
+
+defaults=true

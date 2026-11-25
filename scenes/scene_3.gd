@@ -9,10 +9,13 @@ func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	await TransitionLayer.fade(0.0).finished
 	player.in_dialouge = true
-	showCar()
+	await showCar()
+	DialogueManager.show_dialogue_balloon(dialogues[0])
+	await DialogueManager.dialogue_ended
+	player.in_dialouge = false
 
 
 func showCar():
-	while car.position.x <= 0:
+	while car.position.x < 0:
 		car.position.x += 1
-	player.in_dialouge = false
+	return
