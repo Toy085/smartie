@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://bld15xhwoe4c4"
+path="res://.godot/imported/rename_dog.dialogue-aa34db7319596681dd705fe7cbe7d7f1.tres"
+
+[deps]
+
+source_file="res://Dialogues/scene_4/rename_dog.dialogue"
+dest_files=["res://.godot/imported/rename_dog.dialogue-aa34db7319596681dd705fe7cbe7d7f1.tres"]
+
+[params]
+
+defaults=true
