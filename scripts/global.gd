@@ -1,5 +1,7 @@
 @icon ("res://addons/at-icons/node/globe.svg")
 extends Node
+const END = preload("uid://duusmjvxluagm")
+@export var ending: PackedScene
 
 const SAVE_PATH := "user://"
 
@@ -16,7 +18,11 @@ func change_scene(path: String):
 
 func do_ending(_type: int):
 	await TransitionLayer.fade(1.0).finished
-	get_tree().quit()
+	get_tree().change_scene_to_packed(ending)
+	var audio = AudioStreamPlayer.new()
+	audio.stream = END
+	add_child(audio)
+	audio.play()
 
 func get_save(slot: int = 0) -> String:
 	return SAVE_PATH.path_join("save_%s.tres" % slot)
