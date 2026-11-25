@@ -546,7 +546,7 @@ root_node = NodePath("../DirectionalLight3D")
 libraries/ = SubResource("AnimationLibrary_n5qpo")
 
 [node name="cutscene" type="Camera3D" parent="." unique_id=2085743612]
-transform = Transform3D(-0.9969154, -0.022284465, -0.07523178, 0, 0.95882046, -0.28401294, 0.07846272, -0.28313732, -0.9558644, -4.483082, 4.982551, 7.8682604)
+transform = Transform3D(-0.99691534, -0.022284465, -0.07523178, 0, 0.95882046, -0.28401294, 0.07846271, -0.28313732, -0.9558644, -4.483082, 4.982551, 7.8682604)
 
 [node name="101_Intro" type="AudioStreamPlayer" parent="cutscene" unique_id=763436083]
 stream = ExtResource("3_0xv71")
@@ -676,6 +676,20 @@ mesh = SubResource("ArrayMesh_8aj3a")
 [node name="Door nails" type="MeshInstance3D" parent="Metal door/DoorPivot/GroupDoor" unique_id=1431724918]
 transform = Transform3D(-1.1920929e-05, 2.9802322e-05, -100, -99.55816, 9.390044, 1.7881393e-05, 9.390044, 99.55816, 2.9802322e-05, 1.0359695, 3.7542298, -0.012364222)
 mesh = SubResource("ArrayMesh_dn6bk")
+
+[node name="Room_02" type="CSGCombiner3D" parent="." unique_id=1000398617]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00024989992, 2, -11)
+use_collision = true
+
+[node name="Shell" type="CSGBox3D" parent="Room_02" unique_id=254978061]
+size = Vector3(10.0005, 4, 10.125)
+material = ExtResource("7_0xv71")
+
+[node name="Hollow" type="CSGBox3D" parent="Room_02" unique_id=1489113748]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.13000011, 0.21038818)
+operation = 2
+size = Vector3(9.5005, 3.76, 10.045776)
+material = ExtResource("7_0xv71")
 
 [connection signal="body_entered" from="Elevator/doorSensor" to="." method="_on_door_sensor_body_entered"]
 [connection signal="body_exited" from="Elevator/doorSensor" to="." method="_on_door_sensor_body_exited"]
