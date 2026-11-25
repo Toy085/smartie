@@ -7,8 +7,10 @@ extends CharacterBody2D
 @onready var navigation_agent_2d: NavigationAgent2D = $NavigationAgent2D
 
 var target_pos: Vector2
+
 func _ready() -> void:
 	target_pos = self.position
+	
 func _physics_process(_delta: float):
 	var dir = to_local(navigation_agent_2d.get_next_path_position()).normalized()
 	velocity = dir * speed

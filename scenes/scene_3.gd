@@ -20,4 +20,4 @@ func _ready() -> void:
 	await DialogueManager.dialogue_ended
 
 func give_dog():
-	Global.do_ending(-1)
+	pass

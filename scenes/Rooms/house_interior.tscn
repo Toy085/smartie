@@ -34,6 +34,7 @@ navigation_polygon = SubResource("NavigationPolygon_nujx6")
 [node name="MoveToFirst" parent="." unique_id=278475441 instance=ExtResource("2_mrhq1")]
 position = Vector2(128, -342)
 scale = Vector2(1.6, 1)
+target = Vector2(128, -70)
 
 [node name="MoveToSecond" parent="." unique_id=1426673899 instance=ExtResource("2_mrhq1")]
 position = Vector2(128, -70)

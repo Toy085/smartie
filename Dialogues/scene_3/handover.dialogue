@@ -4,4 +4,5 @@ Postmann Pat: Tusen takk for at du tar hunden vår.
 Postmann Pat: Det var vanskelig å finne noen som kunne.
 Jente: :(
 do world.give_dog()
+Global.change_scene("res://scenes/scene_4.tscn")
 => END
