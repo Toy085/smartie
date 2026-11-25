@@ -1,6 +1,7 @@
 ~ start
-Hi, Stanley
-Tusen takk for at du tar hunden vår.
-Det var vanskelig å finne noen som kunne.
+Postmann Pat: Hi, Stanley
+Postmann Pat: Tusen takk for at du tar hunden vår.
+Postmann Pat: Det var vanskelig å finne noen som kunne.
+Jente: :(
 do world.give_dog()
 => END

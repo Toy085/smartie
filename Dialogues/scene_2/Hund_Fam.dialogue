@@ -11,7 +11,7 @@ Så?
 	do Global.tell_wife = true
 	=> END
 - Beklager, men vi må takke nei.
-	do Global.do_ending(1)
+	do Global.do_ending(3)
 	=> END
 - La meg få snakke med kona mi.
 	Ok, bare ring tilbake.

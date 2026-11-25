@@ -43,5 +43,5 @@ do Global.change_scene("res://scenes/scene_2.tscn")
 
 ~ ingen_hund
 do world.toggle_image()
-do Global.do_ending(0)
+do Global.do_ending(3)
 => END

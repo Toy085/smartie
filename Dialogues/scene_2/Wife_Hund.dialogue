@@ -4,7 +4,7 @@ if not Global.tell_wife
 	- Ja
 		=> fortellHund
 	- Nei
-		do Global.do_ending(1)
+		do Global.do_ending(3)
 		=> END
 else
 	=> fortellHund

@@ -8,6 +8,9 @@
 [ext_resource type="Script" uid="uid://cd3222nx3y3k5" path="res://addons/dialogue_manager/nodes/context/dialogue_state_context.gd" id="5_gm7q5"]
 [ext_resource type="Texture2D" uid="uid://clb5u310ffeed" path="res://assets/images/Welsh_Springer_Spaniel_1.jpg" id="6_2rqdi"]
 [ext_resource type="PackedScene" uid="uid://d2y4l136tjpqw" path="res://char/npc/wife.tscn" id="7_pl5ms"]
+[ext_resource type="Texture2D" uid="uid://cw78xh3fbgbyt" path="res://assets/kenney/kenney_desert-shooter-pack_1.0/PNG/Players/Tiles/tile_0000.png" id="9_gmcgl"]
+[ext_resource type="Texture2D" uid="uid://b2hlkflr2ckyj" path="res://assets/kenney/kenney_tiny-city/Tiles/tile_0121.png" id="10_5uf0h"]
+[ext_resource type="Texture2D" uid="uid://ofva5f2nolhv" path="res://assets/kenney/kenney_tiny-city/Tiles/tile_0108.png" id="11_gm7q5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lmrsu"]
 radius = 9.0
@@ -69,4 +72,23 @@ rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_lmrsu")
 
 [node name="Wife" parent="." unique_id=45592724 instance=ExtResource("7_pl5ms")]
-position = Vector2(0, -300)
+position = Vector2(32, -46)
+
+[node name="Familie" type="Node2D" parent="." unique_id=793729448]
+visible = false
+
+[node name="Tile0000" type="Sprite2D" parent="Familie" unique_id=97642576]
+position = Vector2(80, -30)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_gmcgl")
+flip_h = true
+
+[node name="Tile0121" type="Sprite2D" parent="Familie" unique_id=1351202601]
+position = Vector2(94, -31)
+texture = ExtResource("10_5uf0h")
+flip_h = true
+
+[node name="Tile0108" type="Sprite2D" parent="Familie" unique_id=267505571]
+position = Vector2(65, -27)
+scale = Vector2(1, 0.5)
+texture = ExtResource("11_gm7q5")
