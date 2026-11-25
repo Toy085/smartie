@@ -24,5 +24,6 @@ func set_target(target: Vector2):
 
 func interact_move():
 	var actionables = interaction_area_2d.get_overlapping_areas()
-	if actionables.size() > 0:
+	for i in actionables:
+		if actionables[0] is MoveTo:
 			actionables[0].move_to(self)

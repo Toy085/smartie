@@ -24,7 +24,7 @@ func get_input():
 			actionables[0].dialogue_ended.connect(_on_dialogue_end)
 			return
 		actionables = action_area.get_overlapping_areas()
-		if actionables.size() > 0 && not in_dialouge:
+		if actionables.size() > 0 && not in_dialouge && actionables[0] is MoveTo:
 			await TransitionLayer.fade(1.0, 0.5).finished
 			actionables[0].move_to(self)
 			TransitionLayer.fade(0.0)
