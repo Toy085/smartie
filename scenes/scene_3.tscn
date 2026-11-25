@@ -9,6 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://clb5u310ffeed" path="res://assets/images/Welsh_Springer_Spaniel_1.jpg" id="6_2rqdi"]
 [ext_resource type="PackedScene" uid="uid://d2y4l136tjpqw" path="res://char/npc/wife.tscn" id="7_pl5ms"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lmrsu"]
+radius = 9.0
+height = 24.0
+
 [node name="World" type="Node2D" unique_id=294637574]
 script = ExtResource("1_toq7q")
 dialogues = Array[ExtResource("2_lmrsu")]([ExtResource("3_087sr")])
@@ -52,12 +56,17 @@ texture = ExtResource("6_2rqdi")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="Car" type="Node2D" parent="." unique_id=1782503520]
+[node name="Car" type="CharacterBody2D" parent="." unique_id=397645894]
 position = Vector2(-232, -16)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Car" unique_id=1712985406]
 tile_map_data = PackedByteArray("AAD/////AQAEAAkAAAD//wAAAQAEAAoAAAAAAP//AQAFAAkAAAAAAAAAAQAFAAoAAAA=")
 tile_set = ExtResource("4_lmrsu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Car" unique_id=233900551]
+position = Vector2(0, 4)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_lmrsu")
 
 [node name="Wife" parent="." unique_id=45592724 instance=ExtResource("7_pl5ms")]
 position = Vector2(0, -300)
