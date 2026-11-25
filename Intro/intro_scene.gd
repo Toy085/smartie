@@ -8,7 +8,7 @@ var door_open: bool = false
 func _ready() -> void:
 	TransitionLayer.fade(0.0)
 	elevator.close_door()
-	#animation_player.play("intro_cutscene")
+	animation_player.play("intro_cutscene")
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body in get_tree().get_nodes_in_group("player"):

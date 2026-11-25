@@ -8,6 +8,7 @@ const SAVE_PATH := "user://"
 var current_scene: int = 0
 var fikk_hund: bool = false
 var tell_wife: bool = false
+var force_give: bool = false
 
 var ending: int
 
