@@ -23,11 +23,6 @@ dialogues = Array[ExtResource("2_nb8vq")]([ExtResource("3_qo03w")])
 [node name="Player" parent="." unique_id=1534527947 instance=ExtResource("6_nbtma")]
 position = Vector2(-20, -8)
 
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=336395612]
-zoom = Vector2(2, 2)
-limit_enabled = false
-position_smoothing_enabled = true
-
 [node name="DialogueStateContext" type="Node" parent="." unique_id=319843020 node_paths=PackedStringArray("target")]
 script = ExtResource("9_0xl4q")
 alias = "world"

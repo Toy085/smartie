@@ -24,11 +24,6 @@ dialogues = Array[ExtResource("2_r02jg")]([ExtResource("5_t6bmd"), ExtResource("
 [node name="Player" parent="." unique_id=1534527947 instance=ExtResource("1_ta4h7")]
 position = Vector2(32, 22)
 
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=336395612]
-zoom = Vector2(2, 2)
-limit_enabled = false
-position_smoothing_enabled = true
-
 [node name="Wife" parent="." unique_id=1863178936 instance=ExtResource("3_cn2eb")]
 position = Vector2(-10, -12)
 
