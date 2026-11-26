@@ -6,8 +6,11 @@ extends Node3D
 
 var door_open: bool = false
 var done_doors: bool = false
+var player: CharacterBody3D
 
 func _ready() -> void:
+	var player = get_tree().get_nodes_in_group("player")[0]
+	player.frozen = true
 	TransitionLayer.fade(0.0)
 	elevator.close_door()
 	#animation_player.play("intro_cutscene")

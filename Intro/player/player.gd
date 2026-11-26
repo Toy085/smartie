@@ -4,14 +4,13 @@ extends CharacterBody3D
 @export var mouse_sens: float = 0.25
 
 @onready var head: Node3D = $Head
-@onready var _101_intro: AudioStreamPlayer = $"../cutscene/101_Intro" # REMVOVE WHEN DONE WITH CUTSCENE
 
 var lerp_speed: float = 10.0
 var dir: Vector3 = Vector3.ZERO
+var frozen: bool = false
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	#_101_intro.play()
 
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("pause"):
@@ -22,6 +21,8 @@ func _input(event: InputEvent) -> void:
 		head.rotation.x = clampf(head.rotation.x, deg_to_rad(-89), deg_to_rad(89))
 
 func _physics_process(delta: float) -> void:
+	if frozen:
+		return
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
