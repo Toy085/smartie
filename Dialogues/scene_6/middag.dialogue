@@ -1,3 +1,12 @@
 ~ start
-do Global.do_ending(-1)
+Kone: Wolf er sikkelig snill.
+do world.spawn_waiter()
+Servitør: Hva skal dere ha?
+- Velg din egen rett
+	do Global.force_give = true
+	do Global.change_scene("res://scenes/scene_7.tscn")
+	=> END
+- Ta hva kone di velger
+	do Global.change_scene("res://scenes/scene_7.tscn")
+	=> END
 => END

@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://cw4ago6rrths2"]
+
+[ext_resource type="Script" uid="uid://m7at5nlvdveu" path="res://scenes/scene_8.gd" id="1_6ukmk"]
+[ext_resource type="Script" uid="uid://dbs4435dsf3ry" path="res://addons/dialogue_manager/dialogue_resource.gd" id="2_yple6"]
+[ext_resource type="Resource" uid="uid://d0yf8q4dbrobv" path="res://Dialogues/scene_8/beach.dialogue" id="3_r41sh"]
+[ext_resource type="PackedScene" uid="uid://bxy626fywo2wh" path="res://scenes/Rooms/house_interior.tscn" id="4_cysfd"]
+[ext_resource type="PackedScene" uid="uid://blxofw1bi3bvl" path="res://char/player/player.tscn" id="5_36260"]
+[ext_resource type="PackedScene" uid="uid://d2y4l136tjpqw" path="res://char/npc/wife.tscn" id="6_c4y5g"]
+[ext_resource type="Texture2D" uid="uid://cw78xh3fbgbyt" path="res://assets/kenney/kenney_desert-shooter-pack_1.0/PNG/Players/Tiles/tile_0000.png" id="7_6xcwm"]
+[ext_resource type="Script" uid="uid://cd3222nx3y3k5" path="res://addons/dialogue_manager/nodes/context/dialogue_state_context.gd" id="8_0mfce"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gtxkv"]
+radius = 8.0
+
+[node name="World" type="Node2D" unique_id=1904602711]
+script = ExtResource("1_6ukmk")
+dialogues = Array[ExtResource("2_yple6")]([ExtResource("3_r41sh")])
+
+[node name="HouseInterior" parent="." unique_id=748214789 instance=ExtResource("4_cysfd")]
+
+[node name="Player" parent="." unique_id=1534527947 instance=ExtResource("5_36260")]
+position = Vector2(150, -30)
+
+[node name="Wife" parent="." unique_id=45592724 instance=ExtResource("6_c4y5g")]
+position = Vector2(149, -10)
+
+[node name="Tile0000" type="Sprite2D" parent="." unique_id=1927084229]
+position = Vector2(38, -7)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_6xcwm")
+flip_h = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile0000" unique_id=1781681516]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile0000/StaticBody2D" unique_id=1301435312]
+position = Vector2(0, 4)
+shape = SubResource("CircleShape2D_gtxkv")
+
+[node name="DialogueStateContext" type="Node" parent="." unique_id=165990154 node_paths=PackedStringArray("target")]
+script = ExtResource("8_0mfce")
+alias = "world"
+target = NodePath("..")
+metadata/_custom_type_script = "uid://cd3222nx3y3k5"

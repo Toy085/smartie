@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://baseeqat1droh"
+path="res://.godot/imported/home.dialogue-675acd14bc4166557937d49deb2c72ad.tres"
+
+[deps]
+
+source_file="res://Dialogues/scene_7/home.dialogue"
+dest_files=["res://.godot/imported/home.dialogue-675acd14bc4166557937d49deb2c72ad.tres"]
+
+[params]
+
+defaults=true

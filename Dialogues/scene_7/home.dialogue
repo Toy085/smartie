@@ -1,0 +1,12 @@
+~ start
+Stanley: [i]Smartie[/i], kom here
+do world.move_dog()
+Kone: Hun heter [wave]wolf[/wave].
+- Nei, Smarties er hennes navn.
+	do Global.force_give = true
+	do Global.change_scene("res://scenes/scene_8.tscn")
+	=> END
+- Ok, …
+	do Global.change_scene("res://scenes/scene_8.tscn")
+	=> END
+=> END

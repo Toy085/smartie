@@ -10,3 +10,6 @@ func _ready() -> void:
 	await TransitionLayer.fade(0.0).finished
 	DialogueManager.show_dialogue_balloon(dialogues[0])
 	await DialogueManager.dialogue_ended
+
+func spawn_waiter():
+	pass
