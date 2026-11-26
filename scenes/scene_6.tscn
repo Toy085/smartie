@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://de6nihr7760ix"]
+
+[ext_resource type="Script" uid="uid://b483x63vy834e" path="res://scenes/scene_6.gd" id="1_cyi7w"]
+[ext_resource type="Script" uid="uid://dbs4435dsf3ry" path="res://addons/dialogue_manager/dialogue_resource.gd" id="2_xxjtl"]
+[ext_resource type="Resource" uid="uid://ds3x65l0bif57" path="res://Dialogues/scene_6/middag.dialogue" id="3_8t33k"]
+[ext_resource type="PackedScene" uid="uid://ck07hqdflnfdj" path="res://scenes/Rooms/restaurant.tscn" id="3_vidl5"]
+[ext_resource type="PackedScene" uid="uid://blxofw1bi3bvl" path="res://char/player/player.tscn" id="5_vvcip"]
+[ext_resource type="PackedScene" uid="uid://d2y4l136tjpqw" path="res://char/npc/wife.tscn" id="6_6i4i7"]
+
+[node name="World" type="Node2D" unique_id=1904602711]
+script = ExtResource("1_cyi7w")
+dialogues = Array[ExtResource("2_xxjtl")]([ExtResource("3_8t33k")])
+
+[node name="Restaurant" parent="." unique_id=407761634 instance=ExtResource("3_vidl5")]
+
+[node name="Player" parent="." unique_id=1534527947 instance=ExtResource("5_vvcip")]
+position = Vector2(55, -92)
+
+[node name="Wife" parent="." unique_id=45592724 instance=ExtResource("6_6i4i7")]
+position = Vector2(24, -91)

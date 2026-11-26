@@ -78,17 +78,18 @@ position = Vector2(32, -46)
 visible = false
 
 [node name="Dog" type="Sprite2D" parent="Familie" unique_id=97642576]
-position = Vector2(80, -30)
+position = Vector2(86, -39)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("9_gmcgl")
 flip_h = true
 
 [node name="Tile0121" type="Sprite2D" parent="Familie" unique_id=1351202601]
-position = Vector2(94, -31)
+position = Vector2(101, -34)
 texture = ExtResource("10_5uf0h")
 flip_h = true
 
 [node name="Tile0108" type="Sprite2D" parent="Familie" unique_id=267505571]
-position = Vector2(65, -27)
+position = Vector2(96, -46)
 scale = Vector2(1, 0.5)
 texture = ExtResource("11_gm7q5")
+flip_h = true

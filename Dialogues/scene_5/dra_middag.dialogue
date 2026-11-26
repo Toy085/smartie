@@ -1,3 +1,7 @@
 ~ start
-do Global.do_ending(-1)
+Kone: STANLEY!
+Kone: Vi må dra om 10 minutter
+Kone: Gå og ta på deg den [b]blå[/b] skjorten.
+Kone: Den er mye finere enn det du har på nå.
+do world.wear_shirt()
 => END
