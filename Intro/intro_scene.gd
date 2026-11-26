@@ -3,17 +3,22 @@ extends Node3D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var elevator: Node3D = $Elevator
 @onready var audio_stream_player: AudioStreamPlayer = $"No Options/AudioStreamPlayer"
+@onready var cutscene: Camera3D = $cutscene
+@onready var cutscene_player: AnimationPlayer = $CutscenePlayer
 
 var door_open: bool = false
 var done_doors: bool = false
 var player: CharacterBody3D
 
 func _ready() -> void:
+	elevator.close_door()
 	var player = get_tree().get_nodes_in_group("player")[0]
 	player.frozen = true
+	cutscene.current = true
 	TransitionLayer.fade(0.0)
-	elevator.close_door()
-	#animation_player.play("intro_cutscene")
+	cutscene_player.play("cutscene")
+	await cutscene_player.animation_finished
+	cutscene.current = false
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body in get_tree().get_nodes_in_group("player"):
