@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bkgu0e2u45bo4" path="res://Intro/assets/models/elevator.res" id="5_ebaqr"]
 [ext_resource type="Script" uid="uid://dhg6cb17sm8yr" path="res://Intro/assets/models/elevator.gd" id="6_xujs1"]
 [ext_resource type="Material" path="res://addons/csg_blockout/res/materials/mat_grid_light.tres" id="7_0xv71"]
+[ext_resource type="AudioStream" uid="uid://dpfnd3qwxr54m" path="res://Intro/sfx/1-35. Two Doors.wav" id="8_7qibn"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_oxqbs"]
 size = Vector3(1, 0, 1)
@@ -389,6 +390,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_q3qeo")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ak13p"]
+size = Vector3(10.754028, 1, 4.5186768)
+
 [node name="IntroScene" type="Node3D" unique_id=772025566]
 script = ExtResource("1_n5qpo")
 
@@ -712,44 +716,128 @@ operation = 2
 size = Vector3(1.25, 2.375, 0.29000062)
 material = ExtResource("7_0xv71")
 
-[node name="Metal door" type="Node3D" parent="." unique_id=1408123856]
+[node name="Doors" type="Node3D" parent="." unique_id=1196713410]
+
+[node name="Metal door" type="Node3D" parent="Doors" unique_id=1408123856]
 transform = Transform3D(-0.55, 0, -8.3047695e-08, 0, 0.55, 0, 8.3047695e-08, 0, -0.55, 0, -1.5080228, -5.8622055)
 
-[node name="Cylinder_006" type="MeshInstance3D" parent="Metal door" unique_id=675376023]
+[node name="Cylinder_006" type="MeshInstance3D" parent="Doors/Metal door" unique_id=675376023]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 1.0366929, 6.4413, -0.012307272)
 mesh = SubResource("ArrayMesh_wwjwt")
 
-[node name="Cylinder_009" type="MeshInstance3D" parent="Metal door" unique_id=1202215531]
+[node name="Cylinder_009" type="MeshInstance3D" parent="Doors/Metal door" unique_id=1202215531]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 1.0366929, 3.4423134, -0.012307272)
 mesh = SubResource("ArrayMesh_6uuev")
 
-[node name="Door frame" type="MeshInstance3D" parent="Metal door" unique_id=1986416252]
+[node name="Door frame" type="MeshInstance3D" parent="Doors/Metal door" unique_id=1986416252]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, -0.004071038, 5.409689, -0.08449544)
 mesh = SubResource("ArrayMesh_r04vw")
 
-[node name="Frame hinges" type="MeshInstance3D" parent="Metal door" unique_id=39988848]
+[node name="Frame hinges" type="MeshInstance3D" parent="Doors/Metal door" unique_id=39988848]
 transform = Transform3D(-1.1920929e-05, -6.258488e-05, 100, 99.55817, -9.390057, 5.9604645e-06, 9.390053, 99.55817, 5.9604645e-05, 1.046267, 6.7532063, -0.011497825)
 mesh = SubResource("ArrayMesh_ammhf")
 
-[node name="frame nails" type="MeshInstance3D" parent="Metal door" unique_id=1969226929]
+[node name="frame nails" type="MeshInstance3D" parent="Doors/Metal door" unique_id=1969226929]
 transform = Transform3D(0, 2.9802322e-06, -100, 100, 0, -2.9802322e-06, -2.9802322e-06, -100, 0, -1.0695806, 5.0198536, -0.09276336)
 mesh = SubResource("ArrayMesh_7ylpr")
 
-[node name="DoorPivot" type="Node3D" parent="Metal door" unique_id=1011324822]
+[node name="DoorPivot" type="Node3D" parent="Doors/Metal door" unique_id=1011324822]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.032181, 3, -0.13530254)
 
-[node name="GroupDoor" type="Node3D" parent="Metal door/DoorPivot" unique_id=2132589642]
+[node name="GroupDoor" type="Node3D" parent="Doors/Metal door/DoorPivot" unique_id=2132589642]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.032181, -3, 0.13530254)
 
-[node name="Door" type="MeshInstance3D" parent="Metal door/DoorPivot/GroupDoor" unique_id=760463852]
+[node name="Door" type="MeshInstance3D" parent="Doors/Metal door/DoorPivot/GroupDoor" unique_id=760463852]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 1.0359695, 3.7542295, -0.0123642385)
 mesh = SubResource("ArrayMesh_6g3ml")
 
-[node name="Door knobs" type="MeshInstance3D" parent="Metal door/DoorPivot/GroupDoor" unique_id=1689167667]
+[node name="Door knobs" type="MeshInstance3D" parent="Doors/Metal door/DoorPivot/GroupDoor" unique_id=1689167667]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 1.0359695, 3.7542295, -0.0123642385)
 mesh = SubResource("ArrayMesh_8aj3a")
 
-[node name="Door nails" type="MeshInstance3D" parent="Metal door/DoorPivot/GroupDoor" unique_id=1431724918]
+[node name="Door nails" type="MeshInstance3D" parent="Doors/Metal door/DoorPivot/GroupDoor" unique_id=1431724918]
+transform = Transform3D(-1.1920929e-05, 2.9802322e-05, -100, -99.55816, 9.390044, 1.7881393e-05, 9.390044, 99.55816, 2.9802322e-05, 1.0359695, 3.7542298, -0.012364222)
+mesh = SubResource("ArrayMesh_dn6bk")
+
+[node name="Metal door2" type="Node3D" parent="Doors" unique_id=831002503]
+transform = Transform3D(-0.55, 0, -8.3047695e-08, 0, 0.55, 0, 8.3047695e-08, 0, -0.55, -2, -1.508, -35.068)
+
+[node name="Cylinder_006" type="MeshInstance3D" parent="Doors/Metal door2" unique_id=1326786091]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 1.0366929, 6.4413, -0.012307272)
+mesh = SubResource("ArrayMesh_wwjwt")
+
+[node name="Cylinder_009" type="MeshInstance3D" parent="Doors/Metal door2" unique_id=2126113320]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 1.0366929, 3.4423134, -0.012307272)
+mesh = SubResource("ArrayMesh_6uuev")
+
+[node name="Door frame" type="MeshInstance3D" parent="Doors/Metal door2" unique_id=1270805104]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, -0.004071038, 5.409689, -0.08449544)
+mesh = SubResource("ArrayMesh_r04vw")
+
+[node name="Frame hinges" type="MeshInstance3D" parent="Doors/Metal door2" unique_id=511326104]
+transform = Transform3D(-1.1920929e-05, -6.258488e-05, 100, 99.55817, -9.390057, 5.9604645e-06, 9.390053, 99.55817, 5.9604645e-05, 1.046267, 6.7532063, -0.011497825)
+mesh = SubResource("ArrayMesh_ammhf")
+
+[node name="frame nails" type="MeshInstance3D" parent="Doors/Metal door2" unique_id=1566497455]
+transform = Transform3D(0, 2.9802322e-06, -100, 100, 0, -2.9802322e-06, -2.9802322e-06, -100, 0, -1.0695806, 5.0198536, -0.09276336)
+mesh = SubResource("ArrayMesh_7ylpr")
+
+[node name="DoorPivot" type="Node3D" parent="Doors/Metal door2" unique_id=2118800865]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.032181, 3, -0.13530254)
+
+[node name="GroupDoor" type="Node3D" parent="Doors/Metal door2/DoorPivot" unique_id=601203685]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.032181, -3, 0.13530254)
+
+[node name="Door" type="MeshInstance3D" parent="Doors/Metal door2/DoorPivot/GroupDoor" unique_id=1808309084]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 1.0359695, 3.7542295, -0.0123642385)
+mesh = SubResource("ArrayMesh_6g3ml")
+
+[node name="Door knobs" type="MeshInstance3D" parent="Doors/Metal door2/DoorPivot/GroupDoor" unique_id=1750866905]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 1.0359695, 3.7542295, -0.0123642385)
+mesh = SubResource("ArrayMesh_8aj3a")
+
+[node name="Door nails" type="MeshInstance3D" parent="Doors/Metal door2/DoorPivot/GroupDoor" unique_id=2048648750]
+transform = Transform3D(-1.1920929e-05, 2.9802322e-05, -100, -99.55816, 9.390044, 1.7881393e-05, 9.390044, 99.55816, 2.9802322e-05, 1.0359695, 3.7542298, -0.012364222)
+mesh = SubResource("ArrayMesh_dn6bk")
+
+[node name="Metal door3" type="Node3D" parent="Doors" unique_id=1175862003]
+transform = Transform3D(-0.55, 0, -8.3047695e-08, 0, 0.55, 0, 8.3047695e-08, 0, -0.55, 2, -1.508, -35.068)
+
+[node name="Cylinder_006" type="MeshInstance3D" parent="Doors/Metal door3" unique_id=1696798904]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 1.0366929, 6.4413, -0.012307272)
+mesh = SubResource("ArrayMesh_wwjwt")
+
+[node name="Cylinder_009" type="MeshInstance3D" parent="Doors/Metal door3" unique_id=1486930282]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 1.0366929, 3.4423134, -0.012307272)
+mesh = SubResource("ArrayMesh_6uuev")
+
+[node name="Door frame" type="MeshInstance3D" parent="Doors/Metal door3" unique_id=1836133496]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, -0.004071038, 5.409689, -0.08449544)
+mesh = SubResource("ArrayMesh_r04vw")
+
+[node name="Frame hinges" type="MeshInstance3D" parent="Doors/Metal door3" unique_id=2136371180]
+transform = Transform3D(-1.1920929e-05, -6.258488e-05, 100, 99.55817, -9.390057, 5.9604645e-06, 9.390053, 99.55817, 5.9604645e-05, 1.046267, 6.7532063, -0.011497825)
+mesh = SubResource("ArrayMesh_ammhf")
+
+[node name="frame nails" type="MeshInstance3D" parent="Doors/Metal door3" unique_id=2053083508]
+transform = Transform3D(0, 2.9802322e-06, -100, 100, 0, -2.9802322e-06, -2.9802322e-06, -100, 0, -1.0695806, 5.0198536, -0.09276336)
+mesh = SubResource("ArrayMesh_7ylpr")
+
+[node name="DoorPivot" type="Node3D" parent="Doors/Metal door3" unique_id=1340267445]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.032181, 3, -0.13530254)
+
+[node name="GroupDoor" type="Node3D" parent="Doors/Metal door3/DoorPivot" unique_id=670482029]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.032181, -3, 0.13530254)
+
+[node name="Door" type="MeshInstance3D" parent="Doors/Metal door3/DoorPivot/GroupDoor" unique_id=695803449]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 1.0359695, 3.7542295, -0.0123642385)
+mesh = SubResource("ArrayMesh_6g3ml")
+
+[node name="Door knobs" type="MeshInstance3D" parent="Doors/Metal door3/DoorPivot/GroupDoor" unique_id=97362328]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 1.0359695, 3.7542295, -0.0123642385)
+mesh = SubResource("ArrayMesh_8aj3a")
+
+[node name="Door nails" type="MeshInstance3D" parent="Doors/Metal door3/DoorPivot/GroupDoor" unique_id=537037791]
 transform = Transform3D(-1.1920929e-05, 2.9802322e-05, -100, -99.55816, 9.390044, 1.7881393e-05, 9.390044, 99.55816, 2.9802322e-05, 1.0359695, 3.7542298, -0.012364222)
 mesh = SubResource("ArrayMesh_dn6bk")
 
@@ -773,6 +861,18 @@ operation = 2
 size = Vector3(1.875, 2.75, 1.1250002)
 material = ExtResource("7_0xv71")
 
+[node name="No Options" type="Area3D" parent="." unique_id=542079995]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -33.885838)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="No Options" unique_id=1635753834]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4824829, 0, 1.4922485)
+shape = SubResource("BoxShape3D_ak13p")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="No Options" unique_id=304167326]
+stream = ExtResource("8_7qibn")
+
 [connection signal="body_entered" from="Elevator/doorSensor" to="." method="_on_door_sensor_body_entered"]
 [connection signal="body_exited" from="Elevator/doorSensor" to="." method="_on_door_sensor_body_exited"]
 [connection signal="body_entered" from="Elevator/Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="area_entered" from="No Options" to="." method="_on_no_options_area_entered"]
+[connection signal="body_entered" from="No Options" to="." method="_on_no_options_body_entered"]

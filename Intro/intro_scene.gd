@@ -2,8 +2,10 @@ extends Node3D
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var elevator: Node3D = $Elevator
+@onready var audio_stream_player: AudioStreamPlayer = $"No Options/AudioStreamPlayer"
 
 var door_open: bool = false
+var done_doors: bool = false
 
 func _ready() -> void:
 	TransitionLayer.fade(0.0)
@@ -20,3 +22,10 @@ func _on_door_sensor_body_entered(_body: Node3D) -> void:
 		return
 	await elevator.open_door()
 	door_open = true
+
+func _on_no_options_body_entered(body: Node3D) -> void:
+	if done_doors:
+		return
+	if body is CharacterBody3D:
+		audio_stream_player.play()
+		done_doors = true
