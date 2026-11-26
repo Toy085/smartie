@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://ck07hqdflnfdj" path="res://scenes/Rooms/restaurant.tscn" id="3_vidl5"]
 [ext_resource type="PackedScene" uid="uid://blxofw1bi3bvl" path="res://char/player/player.tscn" id="5_vvcip"]
 [ext_resource type="PackedScene" uid="uid://d2y4l136tjpqw" path="res://char/npc/wife.tscn" id="6_6i4i7"]
+[ext_resource type="Texture2D" uid="uid://ofva5f2nolhv" path="res://assets/kenney/kenney_tiny-city/Tiles/tile_0108.png" id="7_4dusf"]
+[ext_resource type="Texture2D" uid="uid://b2hlkflr2ckyj" path="res://assets/kenney/kenney_tiny-city/Tiles/tile_0121.png" id="8_xxjtl"]
 
 [node name="World" type="Node2D" unique_id=1904602711]
 script = ExtResource("1_cyi7w")
@@ -18,3 +20,13 @@ position = Vector2(55, -92)
 
 [node name="Wife" parent="." unique_id=45592724 instance=ExtResource("6_6i4i7")]
 position = Vector2(24, -91)
+
+[node name="Tile0108" type="Sprite2D" parent="." unique_id=32390305]
+position = Vector2(56, -45)
+scale = Vector2(0.5, 1)
+texture = ExtResource("7_4dusf")
+
+[node name="Tile0121" type="Sprite2D" parent="." unique_id=372164592]
+position = Vector2(25, -44)
+scale = Vector2(1, 0.75)
+texture = ExtResource("8_xxjtl")
