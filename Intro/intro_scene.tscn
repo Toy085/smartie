@@ -95,7 +95,7 @@ ambient_light_energy = 0.0
 glow_enabled = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_doqwu"]
-size = Vector3(0.4442749, 1.3144531, 3.5)
+size = Vector3(0.25047302, 0.41467285, 2.5734863)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_srabn"]
 resource_name = "Brushed metal"
@@ -393,7 +393,7 @@ shadow_mesh = SubResource("ArrayMesh_q3qeo")
 script = ExtResource("1_n5qpo")
 
 [node name="roof" type="StaticBody3D" parent="." unique_id=176341638]
-transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 4, -17.060762)
+transform = Transform3D(-49.999996, 4.3711384e-06, 0, -4.3711384e-06, -49.999996, 0, 0, 0, 50, 0, 4, -17.060762)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="roof" unique_id=860291232]
 shape = SubResource("BoxShape3D_oxqbs")
@@ -675,21 +675,21 @@ shape = SubResource("BoxShape3D_m15cp")
 environment = SubResource("Environment_doqwu")
 
 [node name="Elevator" parent="." unique_id=2022597922 instance=ExtResource("5_ebaqr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.205353, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9582253, 0, -31.053211)
 script = ExtResource("6_xujs1")
 
 [node name="doorSensor" type="Area3D" parent="Elevator" unique_id=1835926348]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1334114, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5268652, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Elevator/doorSensor" unique_id=2125465825]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6525421, 1.1988456, -0.09729004)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.65254235, 1.2833183, -0.09729004)
 shape = SubResource("BoxShape3D_doqwu")
 
 [node name="Area3D" type="Area3D" parent="Elevator" unique_id=777308369]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9792352, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Elevator/Area3D" unique_id=1833775807]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6036072, 0.15722656, -0.17932129)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5067062, 0.52264404, -0.0056152344)
 shape = SubResource("BoxShape3D_doqwu")
 
 [node name="Room" type="CSGCombiner3D" parent="." unique_id=672572459]
@@ -765,6 +765,12 @@ material = ExtResource("7_0xv71")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.13000011, 0.21038818)
 operation = 2
 size = Vector3(9.5005, 3.76, 29.920776)
+material = ExtResource("7_0xv71")
+
+[node name="Door" type="CSGBox3D" parent="Room_02" unique_id=1091450588]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -5.06275, -0.375, -10.15625)
+operation = 2
+size = Vector3(1.875, 2.75, 1.1250002)
 material = ExtResource("7_0xv71")
 
 [connection signal="body_entered" from="Elevator/doorSensor" to="." method="_on_door_sensor_body_entered"]
