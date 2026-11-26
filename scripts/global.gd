@@ -5,6 +5,8 @@ const END = preload("uid://duusmjvxluagm")
 
 const SAVE_PATH := "user://"
 
+var current_save_slot: int = 0
+
 var current_scene: int = 0
 var fikk_hund: bool = false
 var tell_wife: bool = false
@@ -16,11 +18,13 @@ var is_mobile_os = OS.has_feature("mobile") or OS.has_feature("web_android") or 
 var is_web = OS.has_feature("web")
 
 func change_scene(path: String):
+	save_game(current_save_slot)
 	await TransitionLayer.fade(1.0).finished
 	get_tree().change_scene_to_file(path)
 
 func do_ending(type: int):
 	ending = type
+	save_game(current_save_slot)
 	await TransitionLayer.fade(1.0).finished
 	get_tree().change_scene_to_file("res://scenes/UI-based/Ending.tscn")
 
