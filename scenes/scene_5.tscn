@@ -6,11 +6,16 @@
 [ext_resource type="Resource" uid="uid://d1ce6iwmp511k" path="res://Dialogues/scene_5/dra_middag.dialogue" id="3_b5uwh"]
 [ext_resource type="PackedScene" uid="uid://blxofw1bi3bvl" path="res://char/player/player.tscn" id="3_olxyb"]
 [ext_resource type="PackedScene" uid="uid://d2y4l136tjpqw" path="res://char/npc/wife.tscn" id="4_b5uwh"]
+[ext_resource type="Script" uid="uid://cqcur1rm7433g" path="res://addons/dialogue_manager/nodes/actionable/dialogue_actionable_2d.gd" id="5_xpygp"]
 [ext_resource type="Texture2D" uid="uid://cw78xh3fbgbyt" path="res://assets/kenney/kenney_desert-shooter-pack_1.0/PNG/Players/Tiles/tile_0000.png" id="6_nyxad"]
 [ext_resource type="Script" uid="uid://cd3222nx3y3k5" path="res://addons/dialogue_manager/nodes/context/dialogue_state_context.gd" id="9_b5uwh"]
+[ext_resource type="Resource" uid="uid://ci2gcqacyym3" path="res://Dialogues/scene_5/dress.dialogue" id="10_xpygp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_doqwu"]
 radius = 8.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b5uwh"]
+size = Vector2(78, 13)
 
 [node name="World" type="Node2D" unique_id=1904602711]
 script = ExtResource("1_mgkls")
@@ -41,3 +46,16 @@ script = ExtResource("9_b5uwh")
 alias = "world"
 target = NodePath("..")
 metadata/_custom_type_script = "uid://cd3222nx3y3k5"
+
+[node name="DialogueActionable2D" type="Area2D" parent="." unique_id=1876186446]
+position = Vector2(0, -310)
+collision_layer = 16
+collision_mask = 16
+script = ExtResource("5_xpygp")
+dialogue_resource = ExtResource("10_xpygp")
+dialogue_cue = "start"
+metadata/_custom_type_script = "uid://cqcur1rm7433g"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueActionable2D" unique_id=140675647]
+position = Vector2(-7, 3.5)
+shape = SubResource("RectangleShape2D_b5uwh")

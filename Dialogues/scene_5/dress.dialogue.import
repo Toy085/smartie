@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://ci2gcqacyym3"
+path="res://.godot/imported/dress.dialogue-976c1326d7f6e7f3729afcf1ebb08c3e.tres"
+
+[deps]
+
+source_file="res://Dialogues/scene_5/dress.dialogue"
+dest_files=["res://.godot/imported/dress.dialogue-976c1326d7f6e7f3729afcf1ebb08c3e.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,9 @@
+~ start
+Ha på den blå skjorte?
+- Ja
+	do Global.change_scene("res://scenes/scene_6.tscn")
+	=> END
+- Nei
+	do Global.force_give = true
+	do Global.change_scene("res://scenes/scene_6.tscn")
+	=> END
