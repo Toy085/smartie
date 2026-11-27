@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="smartie"
-run/main_scene="uid://dha5r8kj8uetd"
+run/main_scene="uid://dcxuclwnyrs2f"
 config/features=PackedStringArray("4.7")
 config/icon="res://icon.svg"
 
