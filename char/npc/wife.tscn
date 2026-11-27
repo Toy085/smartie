@@ -22,6 +22,7 @@ shape = SubResource("CapsuleShape2D_doqwu")
 debug_path_custom_color = Color(1, 0, 0, 1)
 
 [node name="InteractionArea2D" type="Area2D" parent="." unique_id=1734058373]
+collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea2D" unique_id=1350814300]
 shape = SubResource("RectangleShape2D_doqwu")
