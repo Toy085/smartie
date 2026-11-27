@@ -11,6 +11,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yyu0n")
+end = ExtResource("2_qntb2")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=830558052]
 layout_mode = 1
@@ -20,6 +21,3 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Ending: Null"
-
-[node name="BGM_player" type="AudioStreamPlayer" parent="." unique_id=1756041620]
-stream = ExtResource("2_qntb2")
