@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://clb5u310ffeed" path="res://assets/images/Welsh_Springer_Spaniel_1.jpg" id="11_ig65t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_doqwu"]
-size = Vector2(24, 24)
+size = Vector2(17, 16)
 
 [node name="World" type="Node2D" unique_id=294637574 node_paths=PackedStringArray("waypoints")]
 script = ExtResource("1_t6bmd")
@@ -37,7 +37,7 @@ dialogue_cue = "start"
 metadata/_custom_type_script = "uid://cqcur1rm7433g"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wife/DialogueActionable2D" unique_id=129924209]
-position = Vector2(-12, -4)
+position = Vector2(-8.5, 0)
 shape = SubResource("RectangleShape2D_doqwu")
 
 [node name="waypoints" type="Node2D" parent="." unique_id=1328938269]
