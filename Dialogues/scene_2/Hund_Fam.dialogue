@@ -1,12 +1,12 @@
 ~ start
-Hi, det er Postmann Pat
-Det har vært mye problmer
-Skilsmisse, sykdommer og sånt.
-Det har ført til at vi kan ikke lenger ta være på hunden vår.
-Så vi tenkte at kanskje dere vil ha en hund.
+Postmann Pat: Hi, det er Postmann Pat.
+Postmann Pat: Det har vært mye problmer.
+Postmann Pat: Skilsmisse, sykdommer og sånt.
+Postmann Pat: Det har ført til at vi kan ikke lenger ta være på hunden vår.
+Postmann Pat: Så vi tenkte at kanskje dere vil ha en hund.
 - Hvilken hundrase er den?
 	Det er en [i]Welsh springer spaniel.[/i]
-Så?
+Postmann Pat: Så?
 - Vi kan ta den imot.
 	do Global.tell_wife = true
 	=> END
