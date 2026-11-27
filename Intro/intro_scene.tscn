@@ -1366,6 +1366,12 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 2
 text = "427"
 font_size = 128
 
+[node name="Label3D2" type="Label3D" parent="." unique_id=48978384]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.749679, 3.0283973, -2.5052283)
+text = "WASD is the
+way to go!"
+font_size = 67
+
 [connection signal="body_entered" from="Elevator/doorSensor" to="." method="_on_door_sensor_body_entered"]
 [connection signal="body_exited" from="Elevator/doorSensor" to="." method="_on_door_sensor_body_exited"]
 [connection signal="body_entered" from="Elevator/Area3D" to="." method="_on_area_3d_body_entered"]
