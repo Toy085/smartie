@@ -74,4 +74,4 @@ position = Vector2(10, -10)
 scale = Vector2(0.5769231, 0.5769231)
 sprite_frames = SubResource("SpriteFrames_m15cp")
 animation = &"press"
-frame_progress = 0.8586168
+frame_progress = 0.14874034

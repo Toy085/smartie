@@ -5,8 +5,12 @@ class_name Player
 
 @onready var action_area: Area2D = $ActionArea
 @onready var talk_delay: Timer = $TalkDelay
+@onready var hinting: AnimatedSprite2D = $hinting
 
 var in_dialouge: bool = false
+
+func _ready() -> void:
+	hinting.play("press")
 
 func get_input():
 	var input_direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
@@ -34,6 +38,11 @@ func get_input():
 func _physics_process(_delta):
 	if in_dialouge:
 		return
+	if action_area.get_overlapping_areas().size() >0:
+		hinting.show()
+		
+	else:
+		hinting.hide()
 	get_input()
 	move_and_slide()
 
