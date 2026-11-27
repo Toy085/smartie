@@ -581,7 +581,7 @@ transform = Transform3D(0.99885833, 0.04777059, 0, -0.04777059, 0.99885833, 0, 0
 omni_range = 10.0
 
 [node name="cutscene" type="Camera3D" parent="." unique_id=2085743612]
-transform = Transform3D(-0.996917, -0.022284465, -0.07523178, 0, 0.95882046, -0.28401294, 0.07846285, -0.28313732, -0.9558644, -4.483082, 4.982551, 7.8682604)
+transform = Transform3D(-0.99691695, -0.022284465, -0.07523178, 0, 0.95882046, -0.28401294, 0.07846284, -0.28313732, -0.9558644, -4.483082, 4.982551, 7.8682604)
 
 [node name="101_Intro" type="AudioStreamPlayer" parent="cutscene" unique_id=763436083]
 stream = ExtResource("3_0xv71")
