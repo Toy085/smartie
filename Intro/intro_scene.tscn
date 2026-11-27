@@ -855,7 +855,7 @@ offset_right = 66.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "Stanley's parabel"
+text = "Stanley's Parabel"
 label_settings = SubResource("LabelSettings_doqwu")
 
 [node name="Desks" type="Node3D" parent="." unique_id=1531404638]
