@@ -455,10 +455,118 @@ tracks/4/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("cam2:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-5.000003, 3, 0.4999991)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("cam2:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.26179942, -1.5707964, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("cam2:current")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("cam2:fov")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [75.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("cutscene:current")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("cctvcam:current")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("cctvcam:fov")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [33.9]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("cctvcam:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.20000172, 3.6, -3.699998)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("cctvcam:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.43633237, -2.5307274, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_7qibn"]
 resource_name = "cutscene"
-length = 7.633333
+length = 28.133333
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -466,10 +574,10 @@ tracks/0/path = NodePath("cutscene:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 4.33, 13.933333),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(-2.3552425e-07, 2.5, -25)]
+"values": [Vector3(-2.004, 1.5, -70), Vector3(-2.0040002, 1.5, -36), Vector3(-2.2807367e-07, 1.7, -7)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -478,10 +586,10 @@ tracks/1/path = NodePath("cutscene:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(4.33, 13.933333),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0, -3.1415925, 0)]
+"values": [Vector3(0, -3.1415925, 0), Vector3(0, -3.1415927, 0)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -502,10 +610,10 @@ tracks/3/path = NodePath("cutscene:fov")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 4.33),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [90.0]
+"values": [90.0, 90.0]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -514,10 +622,118 @@ tracks/4/path = NodePath("CanvasLayer/ColorRect:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 4.36),
+"times": PackedFloat32Array(0, 4.3, 6.6666665),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("cam2:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(13, 20.366667),
+"transitions": PackedFloat32Array(1, 1.3195077),
+"update": 0,
+"values": [Vector3(-5.000003, 3, 0.4999991), Vector3(-1, 3.5, 0.5)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("cam2:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(13, 20.366667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+"values": [Vector3(-0.26179942, -1.5707964, 0), Vector3(-0.40142572, -1.5707964, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("cam2:current")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(13),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("cam2:fov")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(13, 20.366667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [75.0, 50.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("cutscene:current")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("cctvcam:current")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(20.68),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("cctvcam:fov")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(20.68, 22.666666, 23.464054, 28.133333),
+"transitions": PackedFloat32Array(1, 1, 10, 1),
+"update": 0,
+"values": [33.9, 33.9, 100.0, 33.9]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("cctvcam:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(20.68),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.20000172, 3.6, -3.699998)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("cctvcam:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(20.68),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.43633237, -2.5307274, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4l4ql"]
@@ -581,7 +797,8 @@ transform = Transform3D(0.99885833, 0.04777059, 0, -0.04777059, 0.99885833, 0, 0
 omni_range = 10.0
 
 [node name="cutscene" type="Camera3D" parent="." unique_id=2085743612]
-transform = Transform3D(-0.99691695, -0.022284465, -0.07523178, 0, 0.95882046, -0.28401294, 0.07846284, -0.28313732, -0.9558644, -4.483082, 4.982551, 7.8682604)
+transform = Transform3D(-0.996917, -0.022284465, -0.07523178, 0, 0.95882046, -0.28401294, 0.07846285, -0.28313732, -0.9558644, -4.483082, 4.982551, 7.8682604)
+current = true
 
 [node name="101_Intro" type="AudioStreamPlayer" parent="cutscene" unique_id=763436083]
 stream = ExtResource("3_0xv71")
@@ -1005,6 +1222,14 @@ stream = ExtResource("8_7qibn")
 
 [node name="CutscenePlayer" type="AnimationPlayer" parent="." unique_id=452786168]
 libraries/ = SubResource("AnimationLibrary_4l4ql")
+
+[node name="cam2" type="Camera3D" parent="." unique_id=1077348023]
+transform = Transform3D(-4.371139e-08, 0.25881907, -0.9659258, 0, 0.9659258, 0.25881907, 1, 1.1313341e-08, -4.222196e-08, -5.000003, 3, 0.4999991)
+
+[node name="cctvcam" type="Camera3D" parent="." unique_id=1205421737]
+transform = Transform3D(-0.81915206, 0.24240391, -0.5198368, 0, 0.9063077, 0.42261833, 0.57357645, 0.34618863, -0.74240386, 0.20000172, 3.6, -3.699998)
+current = true
+fov = 33.9
 
 [connection signal="body_entered" from="Elevator/doorSensor" to="." method="_on_door_sensor_body_entered"]
 [connection signal="body_exited" from="Elevator/doorSensor" to="." method="_on_door_sensor_body_exited"]
