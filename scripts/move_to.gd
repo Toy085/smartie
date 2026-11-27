@@ -1,3 +1,4 @@
+@icon("res://addons/at-icons/node2d/move.svg")
 extends Area2D
 class_name MoveTo
 

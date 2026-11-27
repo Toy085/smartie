@@ -1,3 +1,4 @@
+@icon("res://addons/at-icons/control/dropdown.svg")
 extends CanvasLayer
 
 @onready var color_rect: ColorRect = $ColorRect
