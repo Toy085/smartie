@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://i42g6gmju8gr" path="res://assets/kenney/kenney_tiny-city/Tiles/tile_0120.png" id="1_g708d"]
 [ext_resource type="Script" uid="uid://ksk8yevyx4s8" path="res://scripts/player/movement.gd" id="1_tklbj"]
+[ext_resource type="Texture2D" uid="uid://bvhcowo8xjgr3" path="res://char/player/hinting/up.tres" id="3_03psx"]
+[ext_resource type="Texture2D" uid="uid://ftpifnnukydf" path="res://char/player/hinting/down.tres" id="4_t5dkt"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_doqwu"]
 animations = [{
@@ -20,6 +22,25 @@ height = 16.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_doqwu"]
 radius = 12.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m15cp"]
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_03psx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_t5dkt")
+}],
+"loop": 1,
+"name": &"press",
+"speed": 2.0
+}]
 
 [node name="Player" type="CharacterBody2D" unique_id=1534527947 groups=["player"]]
 script = ExtResource("1_tklbj")
@@ -51,3 +72,11 @@ zoom = Vector2(2, 2)
 process_callback = 0
 limit_enabled = false
 position_smoothing_enabled = true
+
+[node name="hinting" type="AnimatedSprite2D" parent="." unique_id=652858632]
+visible = false
+position = Vector2(10, -10)
+scale = Vector2(0.5769231, 0.5769231)
+sprite_frames = SubResource("SpriteFrames_m15cp")
+animation = &"press"
+frame_progress = 0.72156227
