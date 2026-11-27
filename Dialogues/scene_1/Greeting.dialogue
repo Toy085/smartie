@@ -1,9 +1,9 @@
 ~ start
 Kone: [[Hi|Hallo]], hvorfor er du hjemme så tidlig?
-- Jeg ble ferdig med all oppgavene mine tidlig
+- Jeg ble ferdig med all oppgavene mine tidlig.
 	Kone: Det er bra!
-- Ingen var på jobb
-	Kone: [i]Huh,[/i] det er rart
-Kone: Uansett, kom med meg. Jeg vil vise deg noe
+- Ingen var på jobb.
+	Kone: [i]Huh,[/i] det er rart.
+Kone: Uansett, kom med meg. Jeg vil vise deg noe.
 do world.move_wife(0)
 => END

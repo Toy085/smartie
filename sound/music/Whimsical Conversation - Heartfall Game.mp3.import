@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cjugu780vnekq"
+path="res://.godot/imported/Whimsical Conversation - Heartfall Game.mp3-5ad68e3276fb7b4a76dd96d021133883.mp3str"
+
+[deps]
+
+source_file="res://sound/music/Whimsical Conversation - Heartfall Game.mp3"
+dest_files=["res://.godot/imported/Whimsical Conversation - Heartfall Game.mp3-5ad68e3276fb7b4a76dd96d021133883.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

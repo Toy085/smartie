@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 DialogueManager="*uid://c3rodes2l3gxb"
 Global="*uid://cydj6ilyqju6c"
 TransitionLayer="*uid://cgar11wf3ljd4"
+MusicManager="*uid://b3xarx6lv1yr2"
 
 [dialogue_manager]
 
