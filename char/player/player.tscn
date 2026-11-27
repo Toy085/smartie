@@ -51,14 +51,9 @@ sprite_frames = SubResource("SpriteFrames_doqwu")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=814268004]
 shape = SubResource("CapsuleShape2D_hdnwe")
 
-[node name="TalkArea" type="Area2D" parent="." unique_id=1767662456]
-collision_layer = 16
-collision_mask = 16
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TalkArea" unique_id=985391361]
-shape = SubResource("CircleShape2D_doqwu")
-
 [node name="ActionArea" type="Area2D" parent="." unique_id=2109183016]
+collision_layer = 17
+collision_mask = 17
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActionArea" unique_id=625462412]
 shape = SubResource("CircleShape2D_doqwu")
@@ -79,4 +74,4 @@ position = Vector2(10, -10)
 scale = Vector2(0.5769231, 0.5769231)
 sprite_frames = SubResource("SpriteFrames_m15cp")
 animation = &"press"
-frame_progress = 0.72156227
+frame_progress = 0.8586168
